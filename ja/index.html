@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ReppoChat">
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <title>レポチャット ReppoChat — オフライン・オンデバイスAIキャラクターチャット</title>
+  <meta name="description" content="会話はすべて端末内に。外部に送信しないオフラインAIフレンド、レポチャット。自分だけのキャラクターを作って、インターネットなしで端末内で会話できますよ。Android無料ダウンロード。">
+  <meta name="keywords" content="レポチャット, ReppoChat, オフラインAIチャット, オンデバイスAI, ローカルAI, AIキャラクターチャット, ペルソナチャット, プライバシーAI">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ReppoChat">
+  <meta property="og:title" content="レポチャット ReppoChat — オフライン・オンデバイスAIキャラクターチャット">
+  <meta property="og:description" content="会話はすべて端末内に。外部に送信しないオフラインAIフレンドですよ。">
+  <meta property="og:image" content="https://reppochat.kukudev.com/assets/images/og_ja.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:url" content="https://reppochat.kukudev.com/ja/">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="レポチャット ReppoChat — オフライン・オンデバイスAIキャラクターチャット">
+  <meta name="twitter:description" content="会話はすべて端末内に。外部に送信しないオフラインAIフレンドですよ。">
+  <meta name="twitter:image" content="https://reppochat.kukudev.com/assets/images/og_ja.png">
+
+  <link rel="alternate" hreflang="ko" href="https://reppochat.kukudev.com/">
+  <link rel="alternate" hreflang="en" href="https://reppochat.kukudev.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://reppochat.kukudev.com/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://reppochat.kukudev.com/">
+  <link rel="canonical" href="https://reppochat.kukudev.com/ja/">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://code.iconify.design; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https://api.iconify.design; connect-src https://api.iconify.design; frame-ancestors 'none';">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" crossorigin="anonymous"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #05A66B; --primary-hover: #048C5A; --primary-tint: #E4F6EE; --secondary: #10367D;
+      --canvas: #FFFFFF; --surface: #F9FAFB; --surface2: #F2F4F6; --hairline: #E5E8EB;
+      --ink: #191F28; --ink-strong: #333D4B; --ink-muted: #6B7684; --ink-subtle: #8B95A1;
+      --font-pre: 'Pretendard Variable','Pretendard','Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--canvas); color: var(--ink); font-family: var(--font-pre); line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4 { text-wrap: balance; letter-spacing: -0.2px; overflow-wrap: anywhere; }
+    a { color: inherit; text-decoration: none; } img { max-width: 100%; display: block; }
+    .hi { color: var(--primary); }
+    .nav { position: fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:64px; background:rgba(255,255,255,.82); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid var(--hairline); }
+    .nav-logo { display:flex; align-items:center; gap:9px; } .nav-logo img { height:28px; } .nav-logo span { font-size:20px; font-weight:800; color:var(--ink); letter-spacing:-0.4px; }
+    .nav-right { display:flex; align-items:center; gap:16px; }
+    .nav-section-links { display:flex; align-items:center; gap:4px; }
+    .nav-section-links a { font-size:14px; font-weight:600; color:var(--ink-muted); padding:7px 12px; border-radius:9px; transition:color .2s,background .2s; white-space:nowrap; }
+    .nav-section-links a:hover { color:var(--ink); background:var(--surface2); }
+    .lang-toggle { display:flex; align-items:center; gap:2px; font-size:13px; }
+    .lang-toggle a, .lang-toggle span.active { padding:5px 9px; border-radius:7px; transition:color .2s,background .2s; }
+    .lang-toggle a { color:var(--ink-subtle); } .lang-toggle a:hover { color:var(--ink); background:var(--surface2); }
+    .lang-toggle .active { color:var(--ink); font-weight:700; } .lang-sep { color:var(--hairline); padding:0 1px; font-size:11px; }
+    .lang-dropdown { position:relative; display:none; }
+    .lang-dropdown-btn { display:flex; align-items:center; gap:6px; background:var(--surface2); border:1px solid var(--hairline); color:var(--ink); font-family:var(--font-pre); font-size:13px; font-weight:600; padding:7px 12px; border-radius:9px; cursor:pointer; white-space:nowrap; }
+    .lang-dropdown-menu { display:none; position:absolute; top:calc(100% + 8px); right:0; background:#fff; border:1px solid var(--hairline); border-radius:12px; overflow:hidden; min-width:116px; box-shadow:0 10px 30px rgba(25,31,40,.12); z-index:200; }
+    .lang-dropdown-menu.open { display:block; }
+    .lang-dropdown-item { display:block; padding:11px 16px; font-size:14px; color:var(--ink-muted); transition:background .15s,color .15s; }
+    .lang-dropdown-item:hover { background:var(--surface); color:var(--ink); } .lang-dropdown-item.active { color:var(--primary); font-weight:700; }
+    .btn-nav { display:inline-flex; align-items:center; gap:6px; background:linear-gradient(135deg,var(--primary),var(--primary-hover)); color:#fff; font-family:var(--font-pre); font-size:13px; font-weight:700; padding:9px 16px; border-radius:10px; transition:opacity .2s,transform .2s; white-space:nowrap; box-shadow:0 4px 14px rgba(5,166,107,.28); }
+    .btn-nav:hover { opacity:.92; transform:translateY(-1px); }
+    .hero { position:relative; display:flex; min-height:100vh; overflow:hidden; padding-top:64px; background:radial-gradient(120% 130% at 82% 35%, var(--primary-tint) 0%, rgba(228,246,238,0) 58%), var(--canvas); }
+    .hero-left { position:relative; z-index:2; width:50%; display:flex; flex-direction:column; justify-content:center; padding:80px 56px 80px 80px; }
+    .hero-badge { display:inline-flex; align-items:center; gap:7px; align-self:flex-start; font-size:13px; font-weight:700; color:var(--primary); background:var(--primary-tint); border:1px solid rgba(5,166,107,.2); padding:7px 14px; border-radius:9999px; margin-bottom:24px; }
+    .hero-title { font-size:54px; font-weight:800; color:var(--ink); line-height:1.16; letter-spacing:-1.6px; margin-bottom:22px; }
+    .hero-sub { font-size:19px; font-weight:500; color:var(--ink-muted); line-height:1.6; margin-bottom:40px; }
+    .btn-cta { display:inline-flex; align-items:center; gap:11px; align-self:flex-start; background:linear-gradient(135deg,var(--primary),var(--primary-hover)); color:#fff; font-family:var(--font-pre); font-size:18px; font-weight:700; padding:18px 30px; border-radius:9999px; box-shadow:0 10px 28px rgba(5,166,107,.32); transition:opacity .2s,transform .4s cubic-bezier(.16,1,.3,1); }
+    .btn-cta:hover { opacity:.94; transform:translateY(-2px); }
+    .hero-note { margin-top:14px; font-size:13px; color:var(--ink-subtle); }
+    .hero-right { position:absolute; right:0; top:0; bottom:0; width:50%; z-index:1; overflow:hidden; }
+    .cast { position:absolute; inset:0; -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 99%); mask-image:linear-gradient(to bottom,#000 78%,transparent 99%); }
+    .cast img { position:absolute; bottom:0; width:auto; transform-origin:bottom center; filter:drop-shadow(0 18px 40px rgba(25,31,40,.18)); }
+    .cast .c-front { left:4%; height:88%; z-index:3; } .cast .c-back { right:2%; height:80%; z-index:2; opacity:.96; }
+    .section-tag { display:inline-flex; align-items:center; font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--primary); background:var(--primary-tint); border:1px solid rgba(5,166,107,.18); padding:5px 13px; border-radius:9999px; margin-bottom:18px; }
+    .section-title { font-size:40px; font-weight:800; line-height:1.24; letter-spacing:-0.6px; }
+    .privacy { background:linear-gradient(135deg,#0e2a5e 0%,var(--secondary) 60%,#0c2c66 100%); color:#fff; position:relative; overflow:hidden; }
+    .privacy::before { content:''; position:absolute; top:-120px; right:-80px; width:480px; height:480px; background:radial-gradient(circle,rgba(5,166,107,.22) 0%,transparent 70%); pointer-events:none; }
+    .privacy-inner { max-width:1180px; margin:0 auto; padding:92px 80px; position:relative; z-index:1; }
+    .privacy-head { max-width:780px; margin-bottom:48px; } .privacy-head h2 { font-size:36px; font-weight:800; line-height:1.3; letter-spacing:-0.6px; margin-bottom:16px; } .privacy-head p { font-size:17px; color:rgba(255,255,255,.72); line-height:1.8; }
+    .privacy-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .privacy-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:20px; padding:30px 28px; backdrop-filter:blur(4px); }
+    .privacy-card .pc-icon { width:50px; height:50px; border-radius:14px; display:flex; align-items:center; justify-content:center; background:rgba(5,166,107,.16); color:#2ee79e; font-size:26px; margin-bottom:18px; }
+    .privacy-card h3 { font-size:19px; font-weight:700; margin-bottom:10px; } .privacy-card p { font-size:15px; color:rgba(255,255,255,.7); line-height:1.8; }
+    .how { background:var(--surface); } .how-outer { max-width:1180px; margin:0 auto; padding:100px 80px; }
+    .how-head { text-align:center; margin-bottom:56px; } .how-head .section-tag { margin-left:auto; margin-right:auto; }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:start; }
+    .step { background:var(--canvas); border:1px solid var(--hairline); border-radius:24px; overflow:hidden; transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .3s; box-shadow:0 1px 2px rgba(25,31,40,.04); }
+    .step:hover { transform:translateY(-6px); box-shadow:0 18px 40px rgba(25,31,40,.1); }
+    .step-shot { background:#0d1116; padding:22px 22px 0; display:flex; justify-content:center; }
+    .step-shot img { width:100%; max-width:230px; border-radius:18px 18px 0 0; object-fit:cover; object-position:top; aspect-ratio:9/15; }
+    .step-body { padding:26px 28px 30px; } .step-num { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--primary-hover)); color:#fff; font-size:14px; font-weight:800; margin-bottom:14px; }
+    .step h3 { font-size:18px; font-weight:700; margin-bottom:9px; } .step p { font-size:14px; color:var(--ink-muted); line-height:1.8; }
+    .features { padding:104px 0; position:relative; overflow:hidden; }
+    .features::before { content:''; position:absolute; top:8%; left:-160px; width:520px; height:520px; background:radial-gradient(circle,var(--primary-tint) 0%,transparent 70%); pointer-events:none; }
+    .features-outer { max-width:1180px; margin:0 auto; padding:0 80px; position:relative; }
+    .features-head { text-align:center; margin-bottom:72px; } .features-head .section-tag { margin-left:auto; margin-right:auto; }
+    .frow { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; margin-bottom:108px; } .frow:last-child { margin-bottom:0; }
+    .feat-icon { width:56px; height:56px; border-radius:16px; display:flex; align-items:center; justify-content:center; background:var(--primary-tint); color:var(--primary); font-size:28px; margin-bottom:20px; }
+    .feat-title { font-size:29px; font-weight:800; line-height:1.3; margin-bottom:14px; } .feat-desc { font-size:16px; color:var(--ink-muted); line-height:1.85; }
+    .feat-list { margin-top:18px; display:flex; flex-direction:column; gap:10px; }
+    .feat-list li { list-style:none; display:flex; align-items:flex-start; gap:10px; font-size:15px; color:var(--ink-strong); } .feat-list iconify-icon { color:var(--primary); font-size:19px; flex:0 0 auto; margin-top:3px; }
+    .feat-mock { display:flex; justify-content:center; align-items:center; position:relative; }
+    .feat-mock::before { content:''; position:absolute; width:320px; height:320px; background:radial-gradient(circle,var(--primary-tint) 0%,transparent 70%); pointer-events:none; }
+    .phone { position:relative; width:256px; background:#0d1116; border-radius:38px; padding:10px; box-shadow:0 24px 60px rgba(25,31,40,.22),0 8px 18px rgba(25,31,40,.1); transform:rotate(-3deg); transition:transform .4s ease; z-index:1; }
+    .phone:hover { transform:rotate(0deg) translateY(-4px); } .phone.tilt-r { transform:rotate(3deg); } .phone.tilt-r:hover { transform:rotate(0deg) translateY(-4px); }
+    .phone-screen { aspect-ratio:9/19.5; border-radius:28px; overflow:hidden; background:#000; } .phone-screen img { width:100%; height:100%; object-fit:cover; object-position:top; }
+    .cast-sec { background:var(--surface); position:relative; overflow:hidden; } .cast-outer { max-width:1180px; margin:0 auto; padding:100px 80px; }
+    .cast-head { text-align:center; margin-bottom:52px; } .cast-head .section-tag { margin-left:auto; margin-right:auto; }
+    .cast-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+    .cast-card { position:relative; border-radius:22px; overflow:hidden; aspect-ratio:1/1; background:linear-gradient(160deg,var(--primary-tint) 0%,var(--surface2) 100%); border:1px solid var(--hairline); transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .3s; }
+    .cast-card:hover { transform:translateY(-6px); box-shadow:0 18px 40px rgba(25,31,40,.12); }
+    .cast-card img { width:100%; height:100%; object-fit:cover; object-position:top center; }
+    .cast-card .nm { position:absolute; left:14px; bottom:12px; z-index:2; color:#fff; font-size:14px; font-weight:700; text-shadow:0 2px 8px rgba(0,0,0,.5); }
+    .cast-note { text-align:center; margin-top:34px; font-size:15px; color:var(--ink-muted); }
+    .specs-outer { max-width:1180px; margin:0 auto; padding:90px 80px; }
+    .specs-card { background:var(--canvas); border:1px solid var(--hairline); border-radius:24px; padding:44px 48px; display:grid; grid-template-columns:auto 1fr; gap:40px; align-items:center; box-shadow:0 1px 2px rgba(25,31,40,.04); }
+    .specs-card .si { width:64px; height:64px; border-radius:18px; display:flex; align-items:center; justify-content:center; background:var(--primary-tint); color:var(--primary); font-size:34px; }
+    .specs-list { display:grid; grid-template-columns:repeat(3,1fr); gap:20px 32px; }
+    .specs-list .row .k { font-size:13px; font-weight:700; color:var(--ink-subtle); margin-bottom:4px; } .specs-list .row .v { font-size:16px; font-weight:600; color:var(--ink); }
+    .specs-foot { max-width:1180px; margin:0 auto; padding:0 80px 10px; font-size:13px; color:var(--ink-subtle); line-height:1.8; }
+    .cta-outer { max-width:1180px; margin:0 auto; padding:100px 80px; }
+    .cta-card { position:relative; overflow:hidden; border-radius:32px; text-align:center; background:linear-gradient(135deg,var(--primary) 0%,var(--primary-hover) 100%); padding:80px 60px; color:#fff; }
+    .cta-card::before { content:''; position:absolute; top:-100px; left:-60px; width:380px; height:380px; background:radial-gradient(circle,rgba(255,255,255,.16) 0%,transparent 70%); pointer-events:none; }
+    .cta-card::after { content:''; position:absolute; bottom:-120px; right:-60px; width:420px; height:420px; background:radial-gradient(circle,rgba(16,54,125,.3) 0%,transparent 70%); pointer-events:none; }
+    .cta-card h2 { font-size:36px; font-weight:800; line-height:1.3; margin-bottom:14px; position:relative; z-index:1; } .cta-card p { font-size:17px; color:rgba(255,255,255,.85); margin-bottom:36px; position:relative; z-index:1; }
+    .btn-cta-light { display:inline-flex; align-items:center; gap:11px; position:relative; z-index:1; background:#fff; color:var(--primary-hover); font-family:var(--font-pre); font-size:18px; font-weight:800; padding:18px 32px; border-radius:9999px; box-shadow:0 12px 30px rgba(0,0,0,.18); transition:transform .3s,box-shadow .3s; }
+    .btn-cta-light:hover { transform:translateY(-2px); box-shadow:0 16px 36px rgba(0,0,0,.24); }
+    .cta-note { margin-top:14px; font-size:13px; color:rgba(255,255,255,.7); position:relative; z-index:1; }
+    .footer { background:var(--surface); border-top:1px solid var(--hairline); padding:56px 80px; } .footer-inner { max-width:1180px; margin:0 auto; }
+    .footer-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:26px; }
+    .footer-logo { display:flex; align-items:center; gap:9px; } .footer-logo img { height:26px; } .footer-logo span { font-size:18px; font-weight:800; color:var(--ink); }
+    .footer-lang { display:flex; align-items:center; gap:4px; font-size:13px; } .footer-lang a { color:var(--ink-muted); padding:4px 8px; border-radius:6px; transition:color .2s; } .footer-lang a:hover { color:var(--ink); } .footer-lang .active { color:var(--ink); font-weight:700; padding:4px 8px; } .footer-lang .sep { color:var(--hairline); font-size:11px; }
+    .footer-links { display:flex; gap:22px; font-size:14px; margin-bottom:28px; } .footer-links a { color:var(--ink-muted); font-weight:500; transition:color .2s; } .footer-links a:hover { color:var(--primary); }
+    .footer-biz { font-size:12px; color:var(--ink-subtle); line-height:2; padding-top:24px; border-top:1px solid var(--hairline); margin-bottom:18px; } .footer-copy { font-size:12px; color:var(--ink-subtle); }
+    [data-animate] { opacity:0; transform:translateY(26px); transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1); }
+    [data-animate].visible { opacity:1; transform:translateY(0); }
+    [data-delay="1"] { transition-delay:.08s; } [data-delay="2"] { transition-delay:.16s; } [data-delay="3"] { transition-delay:.24s; }
+    @media (max-width:1024px){ .hero-left{padding:60px 40px;} .hero-title{font-size:42px;} .privacy-inner,.how-outer,.features-outer,.cast-outer,.specs-outer,.cta-outer{padding-left:48px;padding-right:48px;} .specs-foot{padding-left:48px;padding-right:48px;} .frow{gap:48px;} .feat-title{font-size:25px;} .phone{width:220px;} .footer{padding:48px;} }
+    @media (max-width:768px){
+      .nav{padding:0 18px;height:56px;} .nav-section-links,.lang-toggle{display:none;} .lang-dropdown{display:block;} .nav-right{gap:10px;} .btn-nav .btn-nav-text{display:none;}
+      .hero{padding-top:56px;min-height:auto;flex-direction:column;} .hero-left{width:100%;padding:48px 22px 12px;} .hero-title{font-size:34px;letter-spacing:-1px;} .hero-sub{font-size:16px;margin-bottom:30px;}
+      .btn-cta{font-size:16px;padding:16px 24px;align-self:stretch;justify-content:center;} .hero-note{text-align:center;}
+      .hero-right{position:relative;width:100%;height:420px;} .cast .c-front{height:92%;left:8%;} .cast .c-back{height:82%;right:6%;}
+      .section-title{font-size:28px;} .privacy-head h2,.cta-card h2{font-size:27px;} .privacy-inner{padding:64px 22px;} .privacy-head{margin-bottom:32px;} .privacy-head p{font-size:15px;} .privacy-grid{grid-template-columns:1fr;gap:14px;}
+      .how-outer{padding:64px 22px;} .how-head{margin-bottom:36px;} .steps{grid-template-columns:1fr;gap:16px;}
+      .features{padding:64px 0;} .features-outer{padding:0 22px;} .features-head{margin-bottom:44px;} .frow{grid-template-columns:1fr;gap:28px;margin-bottom:64px;display:flex;flex-direction:column;} .frow.rev{flex-direction:column;} .feat-title{font-size:24px;} .phone{width:200px;}
+      .cast-outer{padding:64px 22px;} .cast-grid{grid-template-columns:repeat(2,1fr);gap:14px;}
+      .specs-outer{padding:56px 22px;} .specs-card{grid-template-columns:1fr;gap:24px;padding:32px 26px;} .specs-list{grid-template-columns:1fr 1fr;} .specs-foot{padding:0 22px 8px;}
+      .cta-outer{padding:64px 18px;} .cta-card{padding:56px 26px;} .cta-card p{font-size:15px;} .btn-cta-light{align-self:stretch;}
+      .footer{padding:40px 22px;} .footer-top{flex-direction:column;align-items:flex-start;gap:16px;} .footer-links{flex-wrap:wrap;gap:14px;}
+    }
+    @media (max-width:400px){ .hero-title{font-size:29px;} .section-title,.privacy-head h2,.cta-card h2{font-size:24px;} .cast-grid{grid-template-columns:1fr 1fr;} }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"SoftwareApplication","name":"ReppoChat","alternateName":"レポチャット",
+    "operatingSystem":"Android","applicationCategory":"SocialNetworkingApplication",
+    "description":"会話をすべて端末内で処理する、オフライン・オンデバイスのAIキャラクターチャットアプリ。自分だけのキャラクターを作って、インターネットなしで会話できます。",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},
+    "installUrl":"https://play.google.com/store/apps/details?id=com.kukuDev.reppochat",
+    "author":{"@type":"Organization","name":"kukuDev"}
+  }
+  </script>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/ja/" class="nav-logo"><img src="/assets/logo.png" alt="ReppoChat ロゴ"><span>レポチャット</span></a>
+  <div class="nav-right">
+    <div class="nav-section-links">
+      <a href="#privacy">プライバシー</a>
+      <a href="#how">使い方</a>
+      <a href="#features">主な機能</a>
+      <a href="#cast">キャラクター</a>
+    </div>
+    <div class="lang-toggle">
+      <a href="/">한국어</a><span class="lang-sep">|</span>
+      <a href="/en/">English</a><span class="lang-sep">|</span>
+      <span class="active">日本語</span>
+    </div>
+    <div class="lang-dropdown">
+      <button class="lang-dropdown-btn" onclick="toggleLang(event)">日本語 <iconify-icon icon="solar:alt-arrow-down-bold" style="font-size:11px;opacity:.7"></iconify-icon></button>
+      <div class="lang-dropdown-menu" id="langMenu">
+        <a href="/" class="lang-dropdown-item">한국어</a>
+        <a href="/en/" class="lang-dropdown-item">English</a>
+        <a href="/ja/" class="lang-dropdown-item active">日本語</a>
+      </div>
+    </div>
+    <a href="https://play.google.com/store/apps/details?id=com.kukuDev.reppochat" class="btn-nav" target="_blank" rel="noopener">
+      <iconify-icon icon="solar:smartphone-bold" style="font-size:15px"></iconify-icon>
+      <span class="btn-nav-text">ダウンロード</span>
+    </a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left" data-animate>
+    <span class="hero-badge"><iconify-icon icon="solar:shield-check-bold"></iconify-icon> 100% オンデバイス · オフライン</span>
+    <h1 class="hero-title">会話はすべて<br><span class="hi">端末の中に</span></h1>
+    <p class="hero-sub">外部に送信しないオフラインAIフレンド、レポチャット。<br>自分だけのキャラクターを作って、インターネットなしで端末内で会話できますよ。</p>
+    <a href="https://play.google.com/store/apps/details?id=com.kukuDev.reppochat" class="btn-cta" target="_blank" rel="noopener">
+      <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
+      Google Playでダウンロード
+    </a>
+    <p class="hero-note">Android 9.0以上 · 無料インストール</p>
+  </div>
+  <div class="hero-right" aria-hidden="true">
+    <div class="cast">
+      <img class="c-front" src="/assets/personas/yoon_chaerin.png" alt="" loading="eager" width="600" height="600">
+      <img class="c-back" src="/assets/personas/ernhardt.png" alt="" loading="eager" width="600" height="600">
+    </div>
+  </div>
+</section>
+
+<section class="privacy" id="privacy">
+  <div class="privacy-inner">
+    <div class="privacy-head" data-animate>
+      <h2>会話は<span style="color:#2ee79e">端末の外に出ません</span></h2>
+      <p>AI推論も、会話の記録も、添付した写真の認識も — モデルファイルを受け取った後はすべて端末内で処理されます。メッセージ本文はサーバーへ送信されません。</p>
+    </div>
+    <div class="privacy-grid">
+      <div class="privacy-card" data-animate data-delay="1">
+        <div class="pc-icon"><iconify-icon icon="solar:cpu-bolt-bold"></iconify-icon></div>
+        <h3>端末内で処理</h3>
+        <p>すべての対話はインターネット接続なしで端末内で処理されます。推論と会話の記録は、外部サーバーやクラウドへ送信されません。</p>
+      </div>
+      <div class="privacy-card" data-animate data-delay="2">
+        <div class="pc-icon"><iconify-icon icon="solar:server-square-cloud-bold"></iconify-icon></div>
+        <h3>サーバーへ送らない</h3>
+        <p>会話本文・プロンプト・AI応答・ペルソナ設定・記憶の内容は、運営者のサーバーや外部AI APIへ送信されません。</p>
+      </div>
+      <div class="privacy-card" data-animate data-delay="3">
+        <div class="pc-icon"><iconify-icon icon="solar:plain-bold"></iconify-icon></div>
+        <h3>機内モードでも</h3>
+        <p>モデルファイルを一度受け取れば、機内モードでも会話の生成や記録の閲覧がそのまま動きますよ。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="how-outer">
+    <div class="how-head" data-animate>
+      <span class="section-tag">使い方</span>
+      <h2 class="section-title">3ステップで十分です</h2>
+    </div>
+    <div class="steps">
+      <div class="step" data-animate data-delay="1">
+        <div class="step-shot"><img src="/assets/screenshots/ja/model_download.jpg" alt="モデルダウンロード画面" loading="lazy"></div>
+        <div class="step-body"><div class="step-num">1</div><h3>モデルを一度ダウンロード</h3><p>オープンソースの言語モデルをベースにしたモデルファイルを1つ受け取れば準備完了。標準モデルと高性能モデルから選べます。（Wi-Fi推奨）</p></div>
+      </div>
+      <div class="step" data-animate data-delay="2">
+        <div class="step-shot"><img src="/assets/screenshots/ja/persona_create.jpg" alt="キャラクター作成画面" loading="lazy"></div>
+        <div class="step-body"><div class="step-num">2</div><h3>キャラクターを選ぶ・作る</h3><p>標準プリセットから始めることも、名前・性格・口調・背景まで、自分だけのペルソナを自由に作ることもできます。</p></div>
+      </div>
+      <div class="step" data-animate data-delay="3">
+        <div class="step-shot"><img src="/assets/screenshots/ja/chat_main.jpg" alt="チャット画面" loading="lazy"></div>
+        <div class="step-body"><div class="step-num">3</div><h3>オフラインで会話</h3><p>インターネットなしで端末内ですぐ会話。会話を重ねるほど親密度が上がり、大切な記憶が積み重なっていきます。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="features-outer">
+    <div class="features-head" data-animate>
+      <span class="section-tag">主な機能</span>
+      <h2 class="section-title">レポチャットが特別な理由</h2>
+    </div>
+
+    <div class="frow">
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:cpu-bolt-bold"></iconify-icon></div>
+        <h3 class="feat-title">端末内で動く<span class="hi">ローカルAI</span></h3>
+        <p class="feat-desc">オープンソースの言語モデルをベースにした推論エンジンが、端末内で直接応答を生成します。クラウドも外部APIも経由しません。</p>
+        <ul class="feat-list">
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 標準モデル・高性能モデルから選択</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 複数のモデルを端末内に保存</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> ダウンロード後は完全オフライン</li>
+        </ul>
+      </div>
+      <div class="feat-mock" data-animate data-delay="1"><div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ja/model_download.jpg" alt="モデルダウンロード" loading="lazy"></div></div></div>
+    </div>
+
+    <div class="frow rev">
+      <div class="feat-mock" data-animate data-delay="1"><div class="phone tilt-r"><div class="phone-screen"><img src="/assets/screenshots/ja/persona_create.jpg" alt="キャラクター作成" loading="lazy"></div></div></div>
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:user-plus-bold"></iconify-icon></div>
+        <h3 class="feat-title">自分だけの<span class="hi">キャラクター</span></h3>
+        <p class="feat-desc">名前、性格、口調、好きなもの、嫌いなもの、背景設定まで自由に作れます。標準プリセットから始めることも、好きなだけキャラクターを作ることもできます。</p>
+      </div>
+    </div>
+
+    <div class="frow">
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:bookmark-opened-bold"></iconify-icon></div>
+        <h3 class="feat-title">覚えて<span class="hi">つながる</span>会話</h3>
+        <p class="feat-desc">会話を重ねるほど親密度が上がり、大切な事実・約束・感情の状態が長期記憶として保存されます。重要な記憶はご自身で編集・ピン留めできますよ。</p>
+      </div>
+      <div class="feat-mock" data-animate data-delay="1"><div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ja/memory.jpg" alt="記憶管理" loading="lazy"></div></div></div>
+    </div>
+
+    <div class="frow rev">
+      <div class="feat-mock" data-animate data-delay="1"><div class="phone tilt-r"><div class="phone-screen"><img src="/assets/screenshots/ja/chat_photo.jpg" alt="写真で会話" loading="lazy"></div></div></div>
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:gallery-bold"></iconify-icon></div>
+        <h3 class="feat-title">写真を見せながら<span class="hi">会話</span></h3>
+        <p class="feat-desc">写真を添付すると、キャラクターがその写真を見て返答します。写真の認識も100%端末内で行われ、写真は外部に送信されません。システムの写真選択ツールを使うため、追加の権限も不要です。</p>
+      </div>
+    </div>
+
+    <div class="frow">
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:lock-keyhole-minimalistic-bold"></iconify-icon></div>
+        <h3 class="feat-title">安心して使える<span class="hi">セキュリティ</span></h3>
+        <p class="feat-desc">ローカルデータベースを暗号化し、PIN・生体認証ロックに対応しています。16歳以上を対象にセーフティフィルターを適用し、メッセージ本文はサーバーへ送信されません。</p>
+      </div>
+      <div class="feat-mock" data-animate data-delay="1"><div class="phone"><div class="phone-screen"><img src="/assets/screenshots/ja/app_lock.jpg" alt="アプリロック" loading="lazy"></div></div></div>
+    </div>
+
+    <div class="frow rev">
+      <div class="feat-mock" data-animate data-delay="1"><div class="phone tilt-r"><div class="phone-screen"><img src="/assets/screenshots/ja/backup.jpg" alt="バックアップ" loading="lazy"></div></div></div>
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:download-square-bold"></iconify-icon></div>
+        <h3 class="feat-title">データは<span class="hi">自由に持ち運べる</span></h3>
+        <p class="feat-desc">暗号化された<code>.reppo</code>バックアップファイルで、別の端末への移行や保管ができます。バックアップパスワードを知っているのはご本人だけなので、第三者は開けません。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cast-sec" id="cast">
+  <div class="cast-outer">
+    <div class="cast-head" data-animate>
+      <span class="section-tag">キャラクター</span>
+      <h2 class="section-title">まず会えるキャラクター</h2>
+    </div>
+    <div class="cast-grid">
+      <div data-animate data-delay="1"><div class="cast-card"><img src="/assets/personas/yoon_chaerin.png" alt="ユン・チェリン" loading="lazy"><span class="nm">ユン・チェリン</span></div></div>
+      <div data-animate data-delay="1"><div class="cast-card"><img src="/assets/personas/cha_yujin.png" alt="チャ・ユジン" loading="lazy"><span class="nm">チャ・ユジン</span></div></div>
+      <div data-animate data-delay="2"><div class="cast-card"><img src="/assets/personas/yuna.png" alt="ユナ" loading="lazy"><span class="nm">ユナ</span></div></div>
+      <div data-animate data-delay="2"><div class="cast-card"><img src="/assets/personas/miyu.png" alt="ミユ" loading="lazy"><span class="nm">ミユ</span></div></div>
+      <div data-animate data-delay="1"><div class="cast-card"><img src="/assets/personas/seo_doyoon.png" alt="ソ・ドユン" loading="lazy"><span class="nm">ソ・ドユン</span></div></div>
+      <div data-animate data-delay="2"><div class="cast-card"><img src="/assets/personas/kang_taeo.png" alt="カン・テオ" loading="lazy"><span class="nm">カン・テオ</span></div></div>
+      <div data-animate data-delay="3"><div class="cast-card"><img src="/assets/personas/ernhardt.png" alt="エルンハルト" loading="lazy"><span class="nm">エルンハルト</span></div></div>
+      <div data-animate data-delay="3"><div class="cast-card" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--primary-tint),var(--surface2));"><div style="text-align:center;padding:18px"><iconify-icon icon="solar:add-circle-bold" style="font-size:38px;color:var(--primary)"></iconify-icon><div style="margin-top:8px;font-size:14px;font-weight:700;color:var(--ink-strong)">自分で作る</div></div></div></div>
+    </div>
+    <p class="cast-note">標準プリセットから始めることも、好きなだけ自分だけのペルソナを作ることもできます。</p>
+  </div>
+</section>
+
+<div class="specs-outer">
+  <div class="specs-card" data-animate>
+    <div class="si"><iconify-icon icon="solar:smartphone-2-bold"></iconify-icon></div>
+    <div class="specs-list">
+      <div class="row"><div class="k">OS</div><div class="v">Android 9.0以上 (API 28)</div></div>
+      <div class="row"><div class="k">メモリ (RAM)</div><div class="v">6GB以上が必要</div></div>
+      <div class="row"><div class="k">ストレージ</div><div class="v">モデル1つあたり約5GB</div></div>
+    </div>
+  </div>
+</div>
+<p class="specs-foot">RAM 6GB未満の端末はチャット非対応です。標準モデルはRAM 6GB以上、高性能モデルは12GB以上を推奨し、複数のモデルを保存する場合はその分の追加容量が必要です。写真認識はメモリを多く使うため、メモリの少ない端末では遅くなったり、まれにアプリが終了することがあります。</p>
+
+<div class="cta-outer">
+  <div class="cta-card" data-animate>
+    <h2>今すぐ安心して会話を始めましょう</h2>
+    <p>会話はすべて端末内に。レポチャットで自分だけのAIフレンドに会ってみてください。</p>
+    <a href="https://play.google.com/store/apps/details?id=com.kukuDev.reppochat" class="btn-cta-light" target="_blank" rel="noopener">
+      <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
+      Google Playで無料ダウンロード
+    </a>
+    <p class="cta-note">Android 9.0以上 · 無料インストール</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <span class="footer-logo"><img src="/assets/logo.png" alt="ReppoChat ロゴ"><span>レポチャット</span></span>
+      <div class="footer-lang">
+        <a href="/">한국어</a><span class="sep">|</span>
+        <a href="/en/">English</a><span class="sep">|</span>
+        <span class="active">日本語</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="/ja/privacy.html">プライバシーポリシー</a>
+      <a href="/ja/terms.html">利用規約</a>
+      <a href="https://kukudev.com/ja/">kukuDev</a>
+    </div>
+    <div class="footer-biz">
+      kukuDev（ククデブ） &nbsp;|&nbsp; 代表者: O Jaeseok &nbsp;|&nbsp; 事業者登録番号: 390-68-00863<br>
+      通信販売業届出番号: 2026-Incheon Yeonsu-gu-1196<br>
+      住所: 大韓民国 仁川広域市 延寿区 龍潭路111, 6階 6649号<br>
+      メール: <span id="contact-email"></span>
+    </div>
+    <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){ var u='\x73\x75\x70\x70\x6f\x72\x74', d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d'; var el=document.getElementById('contact-email'); if(el) el.textContent=u+'\x40'+d; })();
+  function toggleLang(e){ e.stopPropagation(); document.getElementById('langMenu').classList.toggle('open'); }
+  document.addEventListener('click', function(){ var m=document.getElementById('langMenu'); if(m) m.classList.remove('open'); });
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} }); }, { threshold:.12 });
+  document.querySelectorAll('[data-animate]').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>

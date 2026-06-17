@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/assets/logo.png">
+<title>Privacy Policy — ReppoChat</title>
+<meta name="description" content="ReppoChat Privacy Policy">
+<link rel="canonical" href="https://reppochat.kukudev.com/en/privacy.html">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; frame-ancestors 'none';">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#05A66B;--primary-hover:#048C5A;--primary-tint:#E4F6EE;--secondary:#10367D;--canvas:#FFFFFF;--surface:#F9FAFB;--surface2:#F2F4F6;--hairline:#E5E8EB;--ink:#191F28;--ink-strong:#333D4B;--ink-muted:#4E5968;--ink-subtle:#8B95A1;--font-pre:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
+.nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
+.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
+.lang-toggle a,.lang-toggle span.active{padding:5px 8px;border-radius:7px}
+.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);text-decoration:none;background:var(--surface2)}
+.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:var(--hairline);font-size:11px}
+.doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
+.doc-head{padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid var(--hairline)}
+.doc-head .tag{display:inline-flex;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--primary-tint);border:1px solid rgba(5,166,107,.18);padding:5px 12px;border-radius:9999px;margin-bottom:14px}
+.content h1{font-size:30px;font-weight:800;letter-spacing:-0.6px;line-height:1.3;margin:0 0 6px}
+.content h2{font-size:22px;font-weight:800;letter-spacing:-0.4px;line-height:1.35;margin:44px 0 14px;padding-top:8px;color:var(--ink)}
+.content h3{font-size:17px;font-weight:700;line-height:1.45;margin:28px 0 10px;color:var(--ink-strong)}
+.content h4{font-size:15px;font-weight:700;margin:20px 0 8px;color:var(--ink-strong)}
+.content p{font-size:15px;color:var(--ink-strong);margin:0 0 12px;line-height:1.85}
+.content ol,.content ul{margin:0 0 14px;padding-left:24px}
+.content li{font-size:15px;color:var(--ink-strong);margin:0 0 7px;line-height:1.8}
+.content ol ol,.content ol ul,.content ul ul,.content ul ol{margin:7px 0 6px}
+.content strong{font-weight:700;color:var(--ink)}
+.content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--surface2);color:var(--primary-hover);padding:2px 6px;border-radius:6px}
+.content hr{border:none;border-top:1px solid var(--hairline);margin:36px 0}
+.content a{color:var(--primary)}
+.tbl-wrap{overflow-x:auto;margin:0 0 20px;border:1px solid var(--hairline);border-radius:14px}
+.content table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.content thead th{background:var(--surface);color:var(--ink);font-weight:700;text-align:left;padding:12px 14px;border-bottom:1px solid var(--hairline);white-space:nowrap}
+.content tbody td{padding:11px 14px;border-bottom:1px solid var(--hairline);color:var(--ink-strong);vertical-align:top;line-height:1.7}
+.content tbody tr:last-child td{border-bottom:none}
+.content tbody tr:nth-child(even){background:var(--surface)}
+.footer{background:var(--surface);border-top:1px solid var(--hairline);padding:40px 32px}
+.footer-inner{max-width:840px;margin:0 auto}
+.footer-links{display:flex;gap:20px;font-size:13px;margin-bottom:20px;flex-wrap:wrap}
+.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary)}
+.footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
+.footer-copy{font-size:12px;color:var(--ink-subtle)}
+@media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/en/" class="nav-logo"><img src="/assets/logo.png" alt="ReppoChat"><span>ReppoChat</span></a>
+  <div class="nav-right">
+    <a href="/en/" class="nav-back">Home</a>
+    <div class="lang-toggle"><a href="/">한국어</a><span class="lang-sep">|</span><span class="active">English</span><span class="lang-sep">|</span><a href="/ja/">日本語</a></div>
+  </div>
+</nav>
+<main class="doc">
+  <div class="content">
+<h1>ReppoChat Privacy Policy</h1>
+<p>Last updated: June 2, 2026</p>
+<p>Effective date: June 2, 2026</p>
+<p>kukuDev ("Operator") values the privacy of users of the ReppoChat mobile application ("App" or "Service") and the privacy of their conversations. This Privacy Policy explains what information is stored on the user's device and what information may be transmitted or processed for service operation or by third-party service providers.</p>
+<h2>1. Core Principles</h2>
+<ol>
+<li>The Operator does not transmit conversation text, prompts, AI responses, detailed persona settings, or memory slot contents to the Operator's servers or to external AI APIs.</li>
+<li>After the model file is downloaded, AI response generation and recognition of photos attached to chats are performed on the user's device.</li>
+<li>Conversation history, personas, relationship state, long-term memory, and search indexes are stored in an encrypted local database on the user's device.</li>
+<li>Information transmitted to servers is limited to metadata necessary for service operation, such as model downloads, ads, purchase verification, error analysis, report processing, security, and abuse prevention.</li>
+<li>The Service currently does not require a separate membership sign-up or login account. Platform features such as Google Play purchases, AdMob ads, and Firebase App Check may be connected to each provider's account and device systems.</li>
+</ol>
+<h2>2. Information Processed and Purposes</h2>
+<h3>2.1 Information Stored Only on the Device</h3>
+<p>The following information is generally stored on the user's device and is not transmitted to the Operator's servers or to external AI APIs.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">Category</th><th style="text-align:left">Processed Items</th><th style="text-align:left">Storage Location</th><th style="text-align:left">Purpose</th><th style="text-align:left">Retention</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">Policy consent information</td><td style="text-align:left">Agreement to the Terms of Service, agreement to the Privacy Policy, confirmation that the user is 16 or older, accepted policy version</td><td style="text-align:left">SharedPreferences</td><td style="text-align:left">Confirm onboarding completion and determine whether re-consent is required</td><td style="text-align:left">Until app data is deleted or policy re-consent is required</td></tr>
+<tr><td style="text-align:left">Persona information</td><td style="text-align:left">Name, age, gender, occupation, appearance, personality tags, MBTI axis values, speech style, likes, dislikes, background narrative, avatar image path</td><td style="text-align:left">SQLCipher local DB and app-specific file area</td><td style="text-align:left">Create AI characters, assemble chat prompts, display the friends list</td><td style="text-align:left">Until deleted by the user or app data is deleted</td></tr>
+<tr><td style="text-align:left">User relationship settings</td><td style="text-align:left">User gender, user age range, persona's role toward the user, user's role toward the persona, initial intimacy</td><td style="text-align:left">SQLCipher local DB</td><td style="text-align:left">Maintain how the persona addresses and relates to the user</td><td style="text-align:left">Until persona deletion, relationship reset, or app data deletion</td></tr>
+<tr><td style="text-align:left">Conversation information</td><td style="text-align:left">User messages, AI responses, message creation time, chat room, FTS search index</td><td style="text-align:left">SQLCipher local DB</td><td style="text-align:left">Display conversations, assemble recent conversation context, enable local search</td><td style="text-align:left">Until message, chat room, persona, or app data deletion</td></tr>
+<tr><td style="text-align:left">Chat attachment images</td><td style="text-align:left">Image files created by re-encoding photos attached by the user as PNG, and the image path associated with the message</td><td style="text-align:left">App-specific file area and SQLCipher local DB</td><td style="text-align:left">Show photos in chat and perform on-device vision recognition</td><td style="text-align:left">Until message, chat room, persona, or app data deletion</td></tr>
+<tr><td style="text-align:left">Memory information</td><td style="text-align:left">Long-term memory slots, important facts, preferences, key events, promises, emotional state, pinned state, salience score</td><td style="text-align:left">SQLCipher local DB</td><td style="text-align:left">Relationship progression, long-term-memory-based responses, memory management screen</td><td style="text-align:left">Until memory deletion, relationship reset, persona deletion, or app data deletion</td></tr>
+<tr><td style="text-align:left">App lock information</td><td style="text-align:left">PIN hash, biometric authentication setting, PIN failure count, retry cooldown time</td><td style="text-align:left">Device secure storage</td><td style="text-align:left">App lock, PIN verification, short retry delay after repeated failures (up to 30 seconds, not permanent lockout)</td><td style="text-align:left">Until the user removes the app lock setting or app data is deleted</td></tr>
+<tr><td style="text-align:left">Local ad-removal state</td><td style="text-align:left">Whether ad removal is active, copy of purchase token</td><td style="text-align:left">Device secure storage</td><td style="text-align:left">Maintain purchase state and hide ads on restart</td><td style="text-align:left">Until purchase state or app data is deleted</td></tr>
+<tr><td style="text-align:left">Model files and runtime settings</td><td style="text-align:left">Model file, model ID, SHA-256, file size verification marker, active model, per-model CPU/GPU settings</td><td style="text-align:left">App-specific file area and SharedPreferences</td><td style="text-align:left">Offline AI inference, model integrity verification, local runtime setting persistence</td><td style="text-align:left">Until the user deletes model files or app data</td></tr>
+<tr><td style="text-align:left">Local report queue</td><td style="text-align:left">Target message ID, target persona ID, report reason, status, report time</td><td style="text-align:left">SQLCipher local DB</td><td style="text-align:left">Offline report queue, retry, report rate limiting</td><td style="text-align:left">Until transmission completion, expiry processing, or app data deletion</td></tr>
+<tr><td style="text-align:left">Backup files</td><td style="text-align:left">Encrypted <code>.reppo</code> files containing personas, relationship states, chat sessions, messages, memory slots, avatar images, and chat attachment image data</td><td style="text-align:left">Location selected by the user for sharing or storage</td><td style="text-align:left">Data transfer, archiving, restoration</td><td style="text-align:left">Until the user deletes the backup file</td></tr>
+</tbody></table></div>
+<h3>2.2 Information That May Be Transmitted to Servers or Third-Party Services</h3>
+<p>The following information may be transmitted to the Operator's server-side functions or third-party services to the extent necessary to operate the Service.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">Category</th><th style="text-align:left">Transmitted Items</th><th style="text-align:left">Recipient</th><th style="text-align:left">Purpose</th><th style="text-align:left">Retention</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">Model download configuration</td><td style="text-align:left">App version, Firebase Remote Config request information, model ID, model filename, model size, SHA-256, and other information needed to retrieve configuration values</td><td style="text-align:left">Firebase Remote Config</td><td style="text-align:left">Check currently available models, check whether downloads are enabled, determine forced updates</td><td style="text-align:left">According to Firebase settings and log policies</td></tr>
+<tr><td style="text-align:left">Model URL request</td><td style="text-align:left">Firebase App Check token, app install hash, requested model ID, request IP, and other HTTP metadata</td><td style="text-align:left">Cloudflare Worker, Firebase App Check</td><td style="text-align:left">Verify genuine app requests, issue presigned URLs, prevent download abuse, rate limit</td><td style="text-align:left">For the period necessary for abuse prevention and log retention</td></tr>
+<tr><td style="text-align:left">Model file download</td><td style="text-align:left">Presigned URL request, downloaded bytes, IP address, and other network metadata</td><td style="text-align:left">Cloudflare R2</td><td style="text-align:left">Provide model files</td><td style="text-align:left">According to Cloudflare log and security policies</td></tr>
+<tr><td style="text-align:left">Report information</td><td style="text-align:left">Target message ID, target persona ID, report reason, creation time, source=android</td><td style="text-align:left">Firebase Cloud Functions, Firestore</td><td style="text-align:left">Receive reports of inappropriate responses, improve safety policy, prevent abuse</td><td style="text-align:left">Operated under a policy of deletion after up to 90 days</td></tr>
+<tr><td style="text-align:left">Purchase verification</td><td style="text-align:left">Google Play product ID, purchase token, order ID, purchase verification result, verification time</td><td style="text-align:left">Firebase Cloud Functions, Google Play Developer API, Firestore</td><td style="text-align:left">Verify ad-removal purchases, prevent duplicate token use, restore purchases</td><td style="text-align:left">For the period necessary to maintain and restore purchase rights and comply with legal retention obligations</td></tr>
+<tr><td style="text-align:left">Advertising information</td><td style="text-align:left">Advertising ID, device information, ad request, impression, click, and other ad interaction information</td><td style="text-align:left">Google AdMob</td><td style="text-align:left">Serve ads, prevent invalid traffic, measure ad performance</td><td style="text-align:left">According to Google AdMob policies</td></tr>
+<tr><td style="text-align:left">Error and crash information</td><td style="text-align:left">App version, OS version, device state, stack trace, error type, model download failure type, device integrity state</td><td style="text-align:left">Firebase Crashlytics</td><td style="text-align:left">Analyze errors, improve stability, understand abnormal device environments</td><td style="text-align:left">According to Firebase Crashlytics settings and retention policies</td></tr>
+<tr><td style="text-align:left">App integrity information</td><td style="text-align:left">Firebase App Check token, Play Integrity related verification information</td><td style="text-align:left">Firebase App Check</td><td style="text-align:left">Prevent abnormal app or automated requests, protect Cloud Functions and Worker endpoints</td><td style="text-align:left">According to Firebase policies</td></tr>
+</tbody></table></div>
+<p>The Operator does not intentionally collect conversation text, prompts, AI responses, detailed persona settings, or memory slot contents during report processing, error analysis, model download, or purchase verification. Photos attached to chats are stored and recognized only on the device and are not transmitted to the Operator's servers or to third parties through any path, including reports.</p>
+<h2>3. Information Not Collected</h2>
+<p>In the current structure of the Service, the Operator does not directly collect the following information.</p>
+<ol>
+<li>Email addresses, passwords, phone numbers, or addresses for membership sign-up</li>
+<li>Real-name verification information, resident registration numbers, passport numbers, or driver's license numbers</li>
+<li>Raw payment instrument information such as credit card numbers or bank account numbers</li>
+<li>Server-side copies of conversation text, prompts, AI responses, detailed persona settings, or memory slot contents</li>
+<li>Contacts, address books, SMS, or call records</li>
+<li>GPS-based precise location information</li>
+<li>Raw biometric authentication data</li>
+<li>Camera capture data. Avatar images and chat attachment photos are images selected by the user from the gallery and re-encoded into app-specific storage. Chat attachment photo recognition is also performed only on the device and is not transmitted to servers.</li>
+</ol>
+<p>Information processed by third-party services such as Google Play, Google AdMob, Firebase, and Cloudflare under their own policies is also subject to the policies of those providers.</p>
+<h2>4. Local Data Processing</h2>
+<ol>
+<li>The App uses a local database named <code>reppochat.db</code>, and the database key is stored in device secure storage.</li>
+<li>Conversations, personas, relationship states, memory slots, report queues, and search indexes are stored in a SQLCipher-based encrypted DB.</li>
+<li>Persona avatar images are stored in the app-specific file area. The App re-encodes images as JPEG so that EXIF and similar metadata are not retained. Photos attached to chats are also re-encoded as PNG in the same privacy-preserving manner, EXIF and similar metadata are removed, and photo recognition is performed only on the device.</li>
+<li>When the user deletes a message, the message is deleted from the local DB and any photo file attached to that message is also deleted.</li>
+<li>When the user deletes a chat room, the relevant chat session, messages, and attached photo files are deleted, and the relationship state and memory slots for the relevant persona are reset.</li>
+<li>When the user deletes a persona, the persona, relationship state, chat sessions, messages, memory slots, avatar file, and chat attachment photo files are deleted together.</li>
+<li>When the user resets a relationship, the relationship state and memory slots are reset and existing messages are excluded from later AI context.</li>
+<li>If the App is deleted, app data is deleted, the device is reset, the device is lost, or the backup password is lost, the Operator cannot recover local data.</li>
+</ol>
+<h2>5. Backup File Processing</h2>
+<ol>
+<li>The App provides export and import features for backup files with the <code>.reppo</code> extension.</li>
+<li>Backup files may include personas, relationship states, chat sessions, messages, memory slots, avatar images, and chat attachment image data.</li>
+<li>Report logs are not included in backup files.</li>
+<li>Backup files apply PBKDF2-HMAC-SHA256 key derivation and AES-256-GCM encryption based on the backup password entered by the user.</li>
+<li>The Operator does not store backup passwords and does not upload backup file contents to servers.</li>
+<li>If the user stores or transmits a backup file through an external app, cloud service, messenger, email, or file sharing feature, security and deletion at that location are the user's responsibility.</li>
+</ol>
+<h2>6. Report Processing</h2>
+<ol>
+<li>Users may use the in-app report feature if they determine that an AI response is inappropriate.</li>
+<li>Information transmitted when reporting is limited to the target message ID, target persona ID, report reason, creation time, and platform information.</li>
+<li>The report feature does not transmit message text, prompts, raw AI responses, detailed persona settings, memory slots, or raw device identifiers.</li>
+<li>Report reasons are limited to selecting from categories defined in the App, such as inappropriate content, violence, sexual expression, self-harm, and other.</li>
+<li>If there is no network connection or server transmission fails, reports may be stored in a local queue and retried.</li>
+<li>To prevent report abuse, the App limits the number of reports per minute, hour, day, week, and month.</li>
+</ol>
+<h2>7. Purchase and Ad-Removal Processing</h2>
+<ol>
+<li>The ad-removal product is provided through Google Play in-app billing.</li>
+<li>The Operator does not directly collect or store raw payment instrument information, card numbers, or bank account numbers. Google Play handles payment processing.</li>
+<li>To verify ad-removal purchases, the App transmits the product ID and Google Play purchase token to Firebase Cloud Functions.</li>
+<li>Cloud Functions verifies the validity of purchases through the Google Play Developer API and may record the purchase token, product ID, order ID, and verification time in Firestore to prevent duplicate token use.</li>
+<li>When purchase verification succeeds, the App may store the ad-removal state and a copy of the purchase token in device secure storage.</li>
+<li>Google Play purchase history and server verification information may be used to restore purchases on a new device or after reinstalling the App.</li>
+<li>Refunds, payment cancellations, payment failures, payment instrument errors, and receipt verification failures follow Google Play policies and applicable laws.</li>
+</ol>
+<h2>8. Advertising Processing</h2>
+<ol>
+<li>Google AdMob ads may be displayed to free users.</li>
+<li>Google AdMob may process advertising ID, device information, IP address, app information, and ad interaction information to serve ads, prevent invalid traffic, control ad frequency, and measure ad performance.</li>
+<li>Users may manage ad personalization and advertising ID reset through device settings or Google ad settings.</li>
+<li>If the user purchases the ad-removal product, the App hides ad containers or stops ad requests.</li>
+<li>The App does not transmit conversation text, prompts, AI responses, detailed persona settings, or memory slot contents to the Operator's servers for ad targeting purposes.</li>
+</ol>
+<h2>9. Error Analysis and Security</h2>
+<ol>
+<li>The App may use Firebase Crashlytics to improve stability.</li>
+<li>Crashlytics may record app version, OS version, device state, stack trace, error type, model download failure type, device integrity state, and similar information.</li>
+<li>The Operator designs the App so that Crashlytics does not record conversation text, prompts, AI responses, detailed persona settings, or memory slot contents.</li>
+<li>The App may detect abnormal device environments such as rooting or emulators. Under the current policy, detection results are used for stability and security analysis rather than blocking users.</li>
+<li>The App may use Firebase App Check and Cloudflare Worker rate limits to restrict abnormal apps, automated requests, and model download abuse.</li>
+</ol>
+<h2>10. Android Permissions</h2>
+<p>The App may use the following Android permissions to provide features.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">Permission</th><th style="text-align:left">Purpose</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left"><code>POST_NOTIFICATIONS</code></td><td style="text-align:left">Used to display AI response generation status as a notification if the internal GGUF fallback inference service is enabled. It is not used for marketing notifications or model download progress notifications. The App currently does not request the runtime notification permission.</td></tr>
+</tbody></table></div>
+<p>The App currently does not use contacts, microphone, camera capture, or precise location permissions for core features. Avatar images and chat attachment photos are processed from files directly selected by the user through the gallery image selection feature or the system photo picker, so the App does not require separate storage access permission.</p>
+<h2>11. Third-Party Provision and Processing</h2>
+<p>The following third-party services are used in providing the Service.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">Provider</th><th style="text-align:left">Services Used</th><th style="text-align:left">Purpose</th><th style="text-align:left">Main Processed Information</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">Google/Firebase</td><td style="text-align:left">App Check, Remote Config, Cloud Functions, Firestore, Crashlytics</td><td style="text-align:left">App integrity verification, model configuration, report receipt, purchase verification functions, error analysis</td><td style="text-align:left">App Check tokens, report metadata, purchase tokens, error information</td></tr>
+<tr><td style="text-align:left">Google Play</td><td style="text-align:left">In-app billing, purchase restoration, purchase verification API</td><td style="text-align:left">Ad-removal payment processing and restoration</td><td style="text-align:left">Purchase tokens, product IDs, order information</td></tr>
+<tr><td style="text-align:left">Google AdMob</td><td style="text-align:left">Mobile advertising</td><td style="text-align:left">Ad serving, invalid traffic prevention, ad performance measurement</td><td style="text-align:left">Advertising ID, device and ad interaction information</td></tr>
+<tr><td style="text-align:left">Cloudflare</td><td style="text-align:left">Workers, R2</td><td style="text-align:left">Model file presigned URL issuance, model file download, rate limiting</td><td style="text-align:left">App Check verification result, install hash, model ID, IP and other network metadata</td></tr>
+<tr><td style="text-align:left">Operating system and device manufacturers</td><td style="text-align:left">Secure storage, biometric authentication, local files, sharing features</td><td style="text-align:left">PIN storage, biometric authentication invocation, backup sharing, local file processing</td><td style="text-align:left">Device-internal secure storage values, biometric authentication result, file paths</td></tr>
+</tbody></table></div>
+<p>The Operator does not provide conversation text, prompts, AI responses, detailed persona settings, or memory slot contents to these third-party services.</p>
+<h2>12. International Transfers</h2>
+<p>Third-party services such as Firebase, Google Play, Google AdMob, and Cloudflare may process information on servers and infrastructure outside the Republic of Korea. Accordingly, model download metadata, report metadata, purchase verification information, advertising information, and error information may be processed on servers operated by Google or Cloudflare in other countries. Each provider's privacy policy and service terms apply to international transfers, security, and retention by that provider.</p>
+<h2>13. Retention and Deletion</h2>
+<ol>
+<li>Local data is stored on the device until the user deletes it or deletes app data.</li>
+<li>Personas, messages, chat rooms, memory slots, and relationship states may be deleted or reset through in-app deletion or reset features.</li>
+<li><code>.reppo</code> backup files remain at the location where the user saved them. Deleting data inside the App does not delete backup files located in external storage locations.</li>
+<li>Report metadata is operated under a policy of retention for up to 90 days for policy improvement and response, followed by deletion.</li>
+<li>Purchase verification information may be retained for the period necessary to maintain ad-removal rights, restore purchases, prevent duplicate token use, respond to payment disputes, and comply with legal obligations.</li>
+<li>Crashlytics error information, AdMob advertising information, Firebase App Check and Remote Config information, and Cloudflare logs are retained according to each third-party service's retention policies and the Operator's settings.</li>
+<li>Information that must be retained under applicable law is retained for the period required by that law and then deleted.</li>
+</ol>
+<h2>14. User Rights and How to Exercise Them</h2>
+<ol>
+<li>Users can directly manage personas, messages, chat rooms, memory slots, model files, app lock settings, and backup files through in-app features.</li>
+<li>Users can delete local data by deleting the App or using the OS app data deletion feature.</li>
+<li>Users can manage advertising ID reset, ad personalization restrictions, notification permissions, and app permissions in device settings.</li>
+<li>Requests to access, correct, or delete report metadata, purchase verification information, or error information transmitted to servers may be submitted by email. The Operator will process requests after verifying identity and whether legal retention is required.</li>
+<li>Purchase entitlement confirmation or refunds are handled according to Google Play account and payment policies.</li>
+<li>If the user loses the backup password, the Operator cannot decrypt or recover the backup file.</li>
+</ol>
+<h2>15. Children's Personal Information</h2>
+<ol>
+<li>The Service is not directed to children under the age of 16.</li>
+<li>Users under the age of 16 may not use the Service, and guardians should manage the device and app installation state so that children do not use the App.</li>
+<li>If the Operator confirms that server-transmitted metadata of a child under 16 has been processed, the Operator will take deletion measures within a reasonable scope, except where retention is required by law.</li>
+</ol>
+<h2>16. Guidance for Safe Use</h2>
+<ol>
+<li>Setting an app PIN and device lock can reduce the risk of others viewing the App on the device.</li>
+<li>The <code>.reppo</code> backup password should be different from passwords used for other services and should be managed so it is not lost.</li>
+<li>If a backup file is shared through cloud services or messengers, the user should check the security settings of that service.</li>
+<li>Users should not enter another person's personal information, sensitive information, payment information, address, contact information, or account information in conversations.</li>
+<li>AI responses do not replace professional counseling or emergency support. For risks involving self-harm or suicide, violence, medical issues, legal issues, financial issues, or similar matters, users should seek help from appropriate authorities or qualified professionals.</li>
+</ol>
+<h2>17. Changes to This Privacy Policy</h2>
+<ol>
+<li>The Operator may revise this Privacy Policy due to changes in applicable laws, service features, third-party SDKs, model download infrastructure, advertising, or payment methods.</li>
+<li>If there are material changes, the Operator will provide notice through in-app notices, webpages, update notes, or other reasonable methods.</li>
+<li>Users who do not agree to the changed policy may stop using the Service and delete the App and local data.</li>
+</ol>
+<h2>18. Contact and Privacy Officer</h2>
+<p>Questions about personal information processing, report data, purchase verification data, error data, or this Policy may be submitted to the following contact.</p>
+<ul>
+<li>Operator: kukuDev</li>
+<li>Privacy Officer: O Jaeseok</li>
+<li>Business registration number: 390-68-00863</li>
+<li>Mail-order business report number: 2026-Incheon Yeonsu-gu-1196</li>
+<li>Address: 6F, Room 6649, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea</li>
+<li>Email: support@kukudev.com</li>
+</ul>
+<p>If reporting or counseling is needed regarding personal information infringement, the following organizations may be used.</p>
+<ul>
+<li>KISA Privacy Infringement Report Center: privacy.kisa.or.kr / 118 without area code in Korea</li>
+<li>Personal Information Dispute Mediation Committee: kopico.go.kr / 1833-6972</li>
+</ul>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/en/privacy.html">Privacy Policy</a><a href="/en/terms.html">Terms of Service</a><a href="https://kukudev.com/en/" target="_blank" rel="noopener">kukuDev</a></div>
+    <div class="footer-biz">kukuDev &nbsp;|&nbsp; Representative: O Jaeseok &nbsp;|&nbsp; Business registration no.: 390-68-00863<br>Mail-order business report no.: 2026-Incheon Yeonsu-gu-1196<br>Address: 6F, Room 6649, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea<br>Email: <span id="contact-email"></span></div>
+    <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+  </div>
+</footer>
+<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('contact-email');if(el)el.textContent=u+'\x40'+d;})();</script>
+</body>
+</html>

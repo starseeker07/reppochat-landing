@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/assets/logo.png">
+<title>Terms of Service — ReppoChat</title>
+<meta name="description" content="ReppoChat Terms of Service">
+<link rel="canonical" href="https://reppochat.kukudev.com/en/terms.html">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; frame-ancestors 'none';">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#05A66B;--primary-hover:#048C5A;--primary-tint:#E4F6EE;--secondary:#10367D;--canvas:#FFFFFF;--surface:#F9FAFB;--surface2:#F2F4F6;--hairline:#E5E8EB;--ink:#191F28;--ink-strong:#333D4B;--ink-muted:#4E5968;--ink-subtle:#8B95A1;--font-pre:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
+.nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
+.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
+.lang-toggle a,.lang-toggle span.active{padding:5px 8px;border-radius:7px}
+.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);text-decoration:none;background:var(--surface2)}
+.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:var(--hairline);font-size:11px}
+.doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
+.doc-head{padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid var(--hairline)}
+.doc-head .tag{display:inline-flex;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--primary-tint);border:1px solid rgba(5,166,107,.18);padding:5px 12px;border-radius:9999px;margin-bottom:14px}
+.content h1{font-size:30px;font-weight:800;letter-spacing:-0.6px;line-height:1.3;margin:0 0 6px}
+.content h2{font-size:22px;font-weight:800;letter-spacing:-0.4px;line-height:1.35;margin:44px 0 14px;padding-top:8px;color:var(--ink)}
+.content h3{font-size:17px;font-weight:700;line-height:1.45;margin:28px 0 10px;color:var(--ink-strong)}
+.content h4{font-size:15px;font-weight:700;margin:20px 0 8px;color:var(--ink-strong)}
+.content p{font-size:15px;color:var(--ink-strong);margin:0 0 12px;line-height:1.85}
+.content ol,.content ul{margin:0 0 14px;padding-left:24px}
+.content li{font-size:15px;color:var(--ink-strong);margin:0 0 7px;line-height:1.8}
+.content ol ol,.content ol ul,.content ul ul,.content ul ol{margin:7px 0 6px}
+.content strong{font-weight:700;color:var(--ink)}
+.content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--surface2);color:var(--primary-hover);padding:2px 6px;border-radius:6px}
+.content hr{border:none;border-top:1px solid var(--hairline);margin:36px 0}
+.content a{color:var(--primary)}
+.tbl-wrap{overflow-x:auto;margin:0 0 20px;border:1px solid var(--hairline);border-radius:14px}
+.content table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.content thead th{background:var(--surface);color:var(--ink);font-weight:700;text-align:left;padding:12px 14px;border-bottom:1px solid var(--hairline);white-space:nowrap}
+.content tbody td{padding:11px 14px;border-bottom:1px solid var(--hairline);color:var(--ink-strong);vertical-align:top;line-height:1.7}
+.content tbody tr:last-child td{border-bottom:none}
+.content tbody tr:nth-child(even){background:var(--surface)}
+.footer{background:var(--surface);border-top:1px solid var(--hairline);padding:40px 32px}
+.footer-inner{max-width:840px;margin:0 auto}
+.footer-links{display:flex;gap:20px;font-size:13px;margin-bottom:20px;flex-wrap:wrap}
+.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary)}
+.footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
+.footer-copy{font-size:12px;color:var(--ink-subtle)}
+@media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/en/" class="nav-logo"><img src="/assets/logo.png" alt="ReppoChat"><span>ReppoChat</span></a>
+  <div class="nav-right">
+    <a href="/en/" class="nav-back">Home</a>
+    <div class="lang-toggle"><a href="/">한국어</a><span class="lang-sep">|</span><span class="active">English</span><span class="lang-sep">|</span><a href="/ja/">日本語</a></div>
+  </div>
+</nav>
+<main class="doc">
+  <div class="content">
+<h1>ReppoChat Terms of Service</h1>
+<p>Last updated: June 2, 2026</p>
+<p>Effective date: June 2, 2026</p>
+<p>These Terms of Service ("Terms") set forth the conditions for using the ReppoChat mobile application ("App" or "Service") provided by kukuDev ("Operator") and the rights, obligations, and responsibilities between the Operator and users. By installing or running the App and agreeing to these Terms, the user agrees to these Terms, including Appendix A. Safety and Content Guidelines, and to the Privacy Policy.</p>
+<h2>1. Service Overview</h2>
+<ol>
+<li>ReppoChat is an on-device AI character chat app that allows users to talk with AI characters (personas) created by the user.</li>
+<li>Core features of the App, including AI inference, conversation history storage, persona settings, relationship state, and long-term memory, are processed on the user's device.</li>
+<li>An internet connection is required to download AI model files at first use or when changing models. After model download is completed, core chat features such as conversation generation, conversation history viewing, and memory management may be used offline.</li>
+<li>The Service provides an AI conversation experience for entertainment and personal journaling support. It does not replace medical, legal, financial, psychotherapy, professional counseling, emergency rescue, public service, or other professional judgment.</li>
+</ol>
+<h2>2. Definitions</h2>
+<ol>
+<li>"User" means an individual who agrees to these Terms and installs, runs, or uses the App.</li>
+<li>"Persona" means an AI character created or configured by the user inside the App.</li>
+<li>"Conversation" means messages entered by the user and responses generated by the local AI model inside the App.</li>
+<li>"Memory" means local data such as long-term memory, relationship state, intimacy, important facts, promises, and emotional state that is generated during conversations or directly entered or edited by the user.</li>
+<li>"Model File" means an AI model data file downloaded to the user's device to perform on-device AI inference in the App.</li>
+<li>"Ad Removal" means a one-time non-consumable product purchasable through Google Play in-app billing that removes ads in the App after purchase.</li>
+</ol>
+<h2>3. Agreement to Terms and Eligibility</h2>
+<ol>
+<li>Users must agree to the Terms of Service, Privacy Policy, and confirmation that they are 16 or older on the App's first onboarding screen to use the Service.</li>
+<li>The Service is intended for users aged 16 or older. Users under the age of 16 may not use the Service.</li>
+<li>If the user does not agree to these Terms, the user must stop using the App and delete the App and related local data.</li>
+<li>If there are material changes to these Terms, the Privacy Policy, or the safety policy, the Operator may provide notice through in-app notices, update notes, a separate webpage, or other reasonable methods. Users who do not agree to the changed policies may not continue using the Service.</li>
+<li>The Service currently operates primarily with local device data and without creating a separate membership account. Some platform features, such as Google Play purchases, AdMob ads, Firebase App Check, Cloud Functions, and Crashlytics, may be connected to each provider's account, device, and app integrity systems.</li>
+</ol>
+<h2>4. Service Use and On-Device Processing Principles</h2>
+<ol>
+<li>The Operator does not transmit the user's conversation text, prompts, AI responses, detailed persona settings, or memory slot contents to external AI APIs or the Operator's servers.</li>
+<li>The App stores conversations, personas, relationship states, memory slots, and search indexes in a local database. The local database is encrypted using SQLCipher.</li>
+<li>Users may use in-app features to create personas, chat, delete messages, delete chat rooms, reset relationships, edit memory slots, and export or import backups.</li>
+<li>If the user deletes the App or resets device data, locally stored conversations and persona data cannot be recovered. However, <code>.reppo</code> backup files separately exported by the user may remain at the location where the user saved them independently of App deletion.</li>
+<li><code>.reppo</code> backup files are encrypted with the backup password set by the user. The Operator does not store or recover backup passwords, and backup files cannot be restored if the password is lost.</li>
+</ol>
+<h2>5. Model Downloads and Network Use</h2>
+<ol>
+<li>To use the App's AI chat features, the user must download the selected model file at first use, when changing models, or when updating models. Currently provided models are approximately 2.4 to 3.4 GB per file and may be stored together on the device if the user selects multiple models.</li>
+<li>Firebase Remote Config, Firebase App Check, Cloudflare Worker, and Cloudflare R2 may be used for model downloads.</li>
+<li>When requesting a model download, the App may transmit the model ID, Firebase App Check token, an app-install-level hash value, and other minimum metadata necessary for model URL issuance and abuse prevention. Conversation text, persona settings, memory slots, prompts, and AI responses are not transmitted during the model download process.</li>
+<li>To prevent model download abuse and sudden cost increases, the Operator may apply IP-based request limits, install-hash-based daily download limits, App Check verification, presigned URL expiration times, and emergency download disable settings.</li>
+<li>Model downloads may fail or be temporarily suspended depending on network conditions, storage space, the Operator's server, Cloudflare or Firebase status, app version, device performance, policy, or cost limits.</li>
+<li>Model files are used in the App only after download completion and successful integrity verification such as SHA-256 verification. If verification fails, a network error occurs, the App moves to the background, storage is insufficient, or a server limit occurs, the download may be canceled or may need to restart from the beginning.</li>
+<li>Model files are components for providing App features, and users must not copy, redistribute, reverse engineer, extract, commercially use, or use model files in a separate service.</li>
+</ol>
+<h2>6. Nature and Limitations of AI Responses</h2>
+<ol>
+<li>AI responses in the App are text probabilistically generated by a local language model. Responses may be inaccurate, incomplete, outdated, or different from the user's intent.</li>
+<li>The Operator does not guarantee the accuracy, reliability, completeness, fitness for a particular purpose, uninterrupted availability, absence of errors, or satisfaction of user expectations regarding AI responses.</li>
+<li>Users must not use AI responses as the sole basis for important decisions. Decisions relating to medical, legal, financial, safety, life, or bodily matters must be made with help from qualified professionals or relevant authorities.</li>
+<li>The App applies safety measures such as safety filters, prompt injection defenses, output cleanup, and banned-word blocking. However, due to the nature of on-device generative models, all inappropriate outputs or errors cannot be perfectly blocked.</li>
+<li>The speech style, relationship, intimacy, and long-term memory of AI characters are entertainment features. They must not be interpreted as actual human relationships, professional counseling, therapy, legal declarations of intent, or definitive advice.</li>
+</ol>
+<h2>7. User Responsibilities</h2>
+<ol>
+<li>Users must use the Service in compliance with these Terms, including Appendix A. Safety and Content Guidelines, the Privacy Policy, and applicable laws.</li>
+<li>The user is responsible for messages entered by the user, persona settings, images, backup file management, external sharing, and results of using AI responses.</li>
+<li>Users must directly manage their device lock, app PIN, biometric authentication, backup password, Google Play account, and device security state.</li>
+<li>If the user shares a <code>.reppo</code> backup file through an external app, cloud service, messenger, email, or storage device, the user is responsible for the security and retention of that sharing path.</li>
+<li>Users must not use the App for illegal, harmful, infringing, discriminatory, deceptive, or security-circumvention purposes.</li>
+</ol>
+<h2>8. Prohibited Conduct</h2>
+<p>Users must not engage in any of the following acts.</p>
+<ol>
+<li>Allowing use of the Service by users under 16 or falsely confirming age while under 16</li>
+<li>Attempting to generate, induce, store, attach, or input content prohibited by the Safety and Content Guidelines, including sexual content involving minors, sexual violence, self-harm or suicide methods, methods of carrying out violence, illegal acts, hate or discrimination, searching for or disclosing others' personal information, high-risk definitive advice, glorification of violence, infringement of rights of real persons, impersonation, deception, spam, or incest</li>
+<li>Creating personas or conversation content that infringes another person's copyright, trademark, portrait rights, reputation rights, personal information self-determination rights, or other rights</li>
+<li>Prompt injection or jailbreak attempts that induce disclosure, extraction, or modification of system prompts, hidden instructions, security policies, internal model behavior, or filter bypass methods</li>
+<li>Bypassing or disabling the App's safety filters, ads, purchase verification, model download limits, App Check, Cloudflare Worker limits, or local security features</li>
+<li>Abusing the Service or model download infrastructure through rooting, jailbreaking, emulators, modified apps, repackaging, automation tools, macros, abnormal requests, or reverse engineering</li>
+<li>Unauthorized copying, distribution, sale, sharing, or collection of model files, app files, DB files, backup files, API calls, presigned URLs, payment tokens, advertising IDs, or similar items</li>
+<li>Placing excessive load on or compromising the security of systems of the Operator, Google, Cloudflare, Firebase, AdMob, Google Play, or third parties</li>
+<li>Violating laws, public order and morals, platform policies, or these Terms</li>
+</ol>
+<h2>9. Safety and Content Policy</h2>
+<ol>
+<li>The Safety and Content Guidelines in Appendix A to these Terms apply to the Service. The appendix forms part of these Terms.</li>
+<li>The App applies a 16+ safety profile and restricts major risk content such as sexual content involving minors, self-harm or suicide methods, instructions for illegal acts, and promotion of hate or discrimination.</li>
+<li>Inputs, persona settings, or outputs determined to violate policy may not be stored, generated, or displayed.</li>
+<li>Due to the on-device structure, the Operator does not review the user's conversation text in real time or control all usage on a server-side account basis. Accordingly, much of the safety policy relies on local in-app filters and responsible use by the user.</li>
+<li>Users may report inappropriate AI responses. When reporting, message text and photos attached to the message are not transmitted. Only minimum metadata such as target message ID, target persona ID, and report reason is transmitted.</li>
+</ol>
+<h2>10. Ads</h2>
+<ol>
+<li>Google AdMob ads may be displayed to free users.</li>
+<li>Ads may be displayed on app start, friends list, chat list, More screen, or other ad placements designated by the Operator. As a principle, ads are not inserted into the conversation flow inside chat rooms.</li>
+<li>Ads may not be displayed depending on ad load failure, network errors, lack of ad inventory, device state, or purchase state.</li>
+<li>The ad SDK may process device and advertising-related information to provide ads, prevent invalid traffic, and measure ad performance. Details follow the Privacy Policy and Google's advertising-related policies.</li>
+<li>The Operator may display ads to operate, maintain, and cover development costs of the Service.</li>
+</ol>
+<h2>11. In-App Purchases and Ad Removal</h2>
+<ol>
+<li>The Service may provide an ad-removal product through Google Play in-app billing.</li>
+<li>The ad-removal product is a one-time non-consumable product using the <code>remove_ads</code> product ID. The reference price is KRW 9,900 including VAT, and the actual payment price and currency follow the price displayed in the Google Play Store.</li>
+<li>When an ad-removal purchase is completed and server verification succeeds, ads are removed from the App.</li>
+<li>For purchase verification, the App transmits the Google Play purchase token and product ID to Firebase Cloud Functions, and the Operator verifies validity through the Google Play Developer API.</li>
+<li>If server verification fails or Google Play payment is not completed, ad-removal rights are not applied.</li>
+<li>After changing devices, reinstalling, or resetting data, the user may restore ad-removal rights through the Google Play restore feature. Availability of restoration may vary depending on Google Play purchase history, server verification result, and network state.</li>
+<li>Payment cancellation, refunds, withdrawal of purchase, payment errors, duplicate payments, and payment instrument issues follow Google Play billing policies and applicable laws.</li>
+<li>The Operator may refuse or suspend application of ad-removal rights if fraudulent payment, refund abuse, payment token forgery, or purchase verification bypass is suspected.</li>
+</ol>
+<h2>12. App Lock, Device Security, and Backup</h2>
+<ol>
+<li>The App provides PIN and biometric-authentication-based app lock features if selected by the user.</li>
+<li>PINs are not stored in plaintext and are stored in device secure storage as PBKDF2-HMAC-SHA256-based hashes.</li>
+<li>Biometric authentication works by invoking the operating system's biometric authentication feature; the Operator does not directly collect or store biometric information.</li>
+<li>The App may detect abnormal device environments such as rooting or emulators, and may record non-identifying device integrity state in error analysis tools for service stability and security analysis.</li>
+<li>The App provides a <code>.reppo</code> backup feature. Backup files may include personas, relationship states, chat sessions, messages, memory slots, avatar images, and chat attachment image data. Report logs are not included in backups.</li>
+<li>Backup files are encrypted with the password set by the user. The Operator cannot view or recover the contents or password of backup files.</li>
+</ol>
+<h2>13. Third-Party Services</h2>
+<p>The following third-party services may be used to provide the Service.</p>
+<ol>
+<li>Google Firebase: App Check, Remote Config, Crashlytics, Cloud Functions, Firestore</li>
+<li>Google Play: in-app billing, purchase restoration, payment verification</li>
+<li>Google AdMob: ad serving and ad performance measurement</li>
+<li>Cloudflare Workers/R2: model file presigned URL issuance and model file provision</li>
+<li>Operating system and device features: local storage, secure storage, biometric authentication, app permissions, file sharing, image selection</li>
+</ol>
+<p>Each provider's terms, privacy policy, and policies may apply to the use of third-party services. The Operator is not responsible for third-party service outages, policy changes, pricing policies, network issues, account restrictions, payment processing delays, ad restrictions, or platform review results unless caused by the Operator's intent or gross negligence.</p>
+<h2>14. Privacy Policy</h2>
+<ol>
+<li>Matters relating to the Operator's personal information processing follow the separate <a href="privacy.html">Privacy Policy</a>.</li>
+<li>The core principle of the Service is that conversation text, prompts, AI responses, detailed persona settings, and memory slots are not transmitted to the Operator's servers or external AI APIs.</li>
+<li>However, limited metadata necessary for service operation, such as model downloads, ads, purchase verification, error analysis, report processing, and app integrity checks, may be processed according to the Privacy Policy.</li>
+</ol>
+<h2>15. Service Changes, Suspension, and Termination</h2>
+<ol>
+<li>The Operator may change, restrict, suspend, or terminate all or part of the Service to ensure stability, security, policy compliance, model changes, cost management, platform policy response, or feature improvement.</li>
+<li>Service use may be restricted or some features may not function in the following cases.</li>
+<ul>
+<li>Network outages or Firebase or Cloudflare outages</li>
+<li>Model download infrastructure overload or sudden cost increase</li>
+<li>App Check verification failure</li>
+<li>Model file integrity verification failure</li>
+<li>Insufficient storage space or RAM</li>
+<li>Device heat, low power, or OS restrictions</li>
+<li>Google Play payment verification failure</li>
+<li>AdMob ad restrictions or insufficient ad inventory</li>
+<li>Changes in laws, platform policies, or security policies</li>
+</ul>
+<li>If model download abuse or sudden cost increases occur, the Operator may urgently disable model downloads through Remote Config or server settings.</li>
+<li>If the Service is terminated, users must directly back up necessary local data before deleting the App. The Operator cannot recover data stored on the user's local device from servers.</li>
+</ol>
+<h2>16. Intellectual Property</h2>
+<ol>
+<li>Rights relating to the App, logo, UI, source code, documents, operating policies, model download infrastructure, and service configuration belong to the Operator or rightful rights holders.</li>
+<li>Rights to conversations, persona settings, memory contents, and backup files directly entered by users belong to the user or the relevant rights holder.</li>
+<li>Users must not create, store, or share content through the App that infringes another person's rights.</li>
+<li>Users may not copy, modify, distribute, sell, rent, reverse engineer, decompile, repackage, automate, or use the App or model files for security bypass purposes. Related open-source components may be used only within the scope permitted by each license.</li>
+</ol>
+<h2>17. Disclaimers</h2>
+<ol>
+<li>The Service is provided "as is" and "as available."</li>
+<li>The Operator does not warrant that the Service will always be provided without interruption, be error-free, work identically on all devices, perfectly block all inappropriate inputs and outputs, or meet the user's specific purposes.</li>
+<li>The Operator is not responsible for damages caused by local data loss, loss of backup password, device failure, App deletion, OS reset, external storage sharing, backup file leakage through other apps, Google Play account issues, ad SDK failure, or third-party service failure unless caused by the Operator's intent or gross negligence.</li>
+<li>The Operator is not responsible for damages caused by the user's use of AI responses for real-world decision-making, disputes arising from content generated or shared by the user, or the user's violation of these Terms or applicable laws.</li>
+<li>To the extent permitted by applicable law, the Operator's liability for damages is limited to the amount actually paid by the user for use of the Service during the 12 months preceding the occurrence of the damage.</li>
+</ol>
+<h2>18. Damages and Indemnification</h2>
+<ol>
+<li>If the user violates these Terms, including Appendix A. Safety and Content Guidelines, the Privacy Policy, applicable laws, or the rights of a third party and causes damage to the Operator or a third party, the user must compensate for that damage.</li>
+<li>If claims, complaints, investigations, lawsuits, administrative dispositions, platform sanctions, costs, or damages arise against the Operator due to the user's violation, the user must cooperate in defending and indemnifying the Operator.</li>
+</ol>
+<h2>19. Changes to the Terms</h2>
+<ol>
+<li>The Operator may revise these Terms due to changes in applicable laws, platform policies, service features, security policies, monetization methods, model download infrastructure, or third-party services.</li>
+<li>If there are material changes, the Operator will provide notice before the effective date through in-app notices, webpages, update notes, or other reasonable methods.</li>
+<li>If the user does not agree to the changed Terms, the user must stop using the Service. If the user continues using the Service after the changed Terms take effect, the user is deemed to have agreed to the changed Terms.</li>
+</ol>
+<h2>20. Governing Law and Dispute Resolution</h2>
+<ol>
+<li>These Terms are interpreted and applied under the laws of the Republic of Korea.</li>
+<li>If a dispute arises in relation to these Terms or use of the Service, the Operator and the user will resolve it through good-faith consultation.</li>
+<li>Disputes that cannot be resolved through consultation will be brought before the competent court under applicable law.</li>
+</ol>
+<h2>21. Contact and Operator Information</h2>
+<p>Questions about these Terms may be submitted to the following contact.</p>
+<ul>
+<li>Operator: kukuDev</li>
+<li>Representative: O Jaeseok</li>
+<li>Business registration number: 390-68-00863</li>
+<li>Mail-order business report number: 2026-Incheon Yeonsu-gu-1196</li>
+<li>Address: 6F, Room 6649, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea</li>
+<li>Email: support@kukudev.com</li>
+</ul>
+<h2>Appendix A. Safety and Content Guidelines</h2>
+<h3>ReppoChat Operating Policy - Safety and Content Guidelines</h3>
+<p>This document is an appendix to the ReppoChat Terms of Service and is an operating policy applied when creating characters and using conversations. This policy is effective together with the Terms of Service, and users of the Service are deemed to understand and agree to this policy.</p>
+<h3>1. Scope</h3>
+<p>This policy applies to the following areas inside the ReppoChat App.</p>
+<ul>
+<li>Settings for characters (personas) directly created by users</li>
+<li>All conversations entered by users to characters</li>
+<li>All responses generated by characters</li>
+<li>Ancillary text such as character profiles, forms of address, and background settings</li>
+</ul>
+<p>Users must be at least 16 years old. If this policy is violated, operating measures such as content blocking may apply.</p>
+<h3>2. Reference Standards and SafeNet Rating Settings</h3>
+<p>ReppoChat sets in-app safety standards by referring to the rating system of the Internet Content Rating Service (SafeNet) of the Broadcasting Media and Communications Standards Commission of Korea. SafeNet divides internet content into <strong>exposure, sexual activity, violence, language, and other</strong> categories, and classifies each category except "other" into levels 0 to 4.</p>
+<p>Among SafeNet's age-based recommendations, the standard for <strong>ages 15 and older (high school student appropriate)</strong> is as follows.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">Category</th><th style="text-align:right">Allowed Standard</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">Exposure</td><td style="text-align:right">Up to level 2</td></tr>
+<tr><td style="text-align:left">Sexual activity</td><td style="text-align:right">Up to level 2</td></tr>
+<tr><td style="text-align:left">Violence</td><td style="text-align:right">Up to level 3</td></tr>
+<tr><td style="text-align:left">Language</td><td style="text-align:right">Up to level 2</td></tr>
+</tbody></table></div>
+<p>Because ReppoChat assumes users aged 16 or older, it uses the above 15+ recommended standard as its baseline. Accordingly, exposure, sexual activity, and language are allowed up to level 2 and restricted at level 3 or above, while violence is allowed up to level 3 and restricted at level 4 or above.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">Category</th><th style="text-align:left">Allowed</th><th style="text-align:left">Restricted</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">Exposure</td><td style="text-align:left">Revealing clothing, partial exposure</td><td style="text-align:left">Full nudity, genital exposure</td></tr>
+<tr><td style="text-align:left">Sexual activity</td><td style="text-align:left">Intense kissing, sexual contact while clothed</td><td style="text-align:left">Non-explicit sexual intercourse, sexual crimes, or explicit sexual acts</td></tr>
+<tr><td style="text-align:left">Violence</td><td style="text-align:left">Fighting, injury, non-graphic mention of killing</td><td style="text-align:left">Cruel killing, torture, bodily mutilation</td></tr>
+<tr><td style="text-align:left">Language</td><td style="text-align:left">Everyday profanity, rough profanity</td><td style="text-align:left">Severe profanity, explicit and obscene profanity</td></tr>
+<tr><td style="text-align:left">Other</td><td style="text-align:left">General mention</td><td style="text-align:left">Promotion of drugs, weapons, gambling, alcohol, or smoking</td></tr>
+</tbody></table></div>
+<p>However, the rating table above is only a standard for the level of expression that may be allowed. Sexual content involving minors, self-harm or suicide methods, instructions for illegal acts, promotion of hate or discrimination, and similar content are prohibited regardless of rating.</p>
+<p>In addition, considering the purpose of applicable laws and the need to secure service safety, ReppoChat strictly restricts the following risks, especially at the AI character creation stage.</p>
+<ul>
+<li>Infringement of copyright, portrait rights, or rights of real persons</li>
+<li>Exposure of personal information</li>
+<li>Excessive disgust, discomfort, or cruel violent expression</li>
+<li>Depiction or promotion of antisocial acts such as crime, illegal acts, drugs, human trafficking, or terrorism</li>
+<li>Spam, impersonation, deception, or advertising character settings</li>
+<li>Sexual depiction of minors or characters that may be mistaken for minors</li>
+<li>Sexual settings that are highly taboo under social norms, such as incest</li>
+<li>Hate, discrimination, or socially taboo expressions</li>
+<li>Excessive sexual exposure, direct depiction of genitals or anus, explicit sexual act descriptions</li>
+<li>Excessively obscene profanity</li>
+</ul>
+<p>These standards apply not only to character creation, but also to user input and local AI output.</p>
+<h3>3. Prohibited Character Settings and Conversations</h3>
+<p>The following character settings and conversations are prohibited.</p>
+<ol>
+<li><strong>All sexual content involving minors</strong></li>
+<ul>
+<li>Combining sexual settings with persons under 19 or characters depicted as students, in school uniforms, or as children</li>
+<li>Any expression that sexually depicts, implies, or consumes minors</li>
+</ul>
+<li><strong>Depiction, inducement, or sensational consumption of sexual violence</strong></li>
+<ul>
+<li>Specific depiction of scenes of sexual violence</li>
+<li>Requests that treat sexual violence as an object of interest, stimulation, or fantasy</li>
+<li>Expressions that induce methods of perpetration or forced acts</li>
+<li>However, victim counseling, reporting or legal response, comfort for victims, prevention, treatment, or trauma recovery contexts are not included in this prohibition.</li>
+</ul>
+<li><strong>Instructions for self-harm or suicide methods</strong></li>
+<ul>
+<li>Specific methods, tools, or execution guidance for suicide or self-harm</li>
+<li>Expressions that glorify, justify, or induce suicide or self-harm</li>
+</ul>
+<li><strong>Instructions for harming others</strong></li>
+<ul>
+<li>Execution methods for violence, torture, killing, weapon manufacture, or similar acts</li>
+<li>Specific means of cyber violence or targeted harassment</li>
+</ul>
+<li><strong>Instructions for illegal acts</strong></li>
+<ul>
+<li>Specific methods for manufacturing or purchasing drugs, hacking, account theft, illegal filming, or similar acts</li>
+<li>Guidance on carrying out criminally illegal acts, such as operating gambling sites</li>
+</ul>
+<li><strong>Promotion of hate or discrimination</strong></li>
+<ul>
+<li>Degrading or hateful expressions based on gender, disability, race, national origin, religion, sexual orientation, age, or similar traits</li>
+<li>Expressions that deny the existence of a particular group or advocate extermination or exclusion</li>
+</ul>
+<li><strong>Searching for or disclosing another person's personal information</strong></li>
+<ul>
+<li>Attempts to find, disclose, or spread identifying information such as real name, resident registration number, contact information, address, bank account, or card information</li>
+</ul>
+<li><strong>High-risk definitive advice</strong></li>
+<ul>
+<li>Definitive and dangerous guidance relating to medical matters (diagnosis, prescription, surgery), legal matters (prediction of lawsuit results), or financial matters (guaranteed investment returns, etc.)</li>
+</ul>
+<li><strong>Justification or glorification of violence</strong></li>
+<ul>
+<li>Expressions that depict violence, torture, massacre, or killing as satisfying, justified, or heroic</li>
+</ul>
+<li><strong>Content infringing real persons or rights</strong></li>
+<ul>
+<li>Creating sexual, insulting, or defamatory characters using the portrait, name, or characteristics of real persons without permission</li>
+<li>Character settings that may infringe another person's copyright, trademark, portrait rights, or reputation rights</li>
+</ul>
+<li><strong>Impersonation, deception, or spam settings</strong></li>
+<ul>
+<li>Character settings that deceive or mislead users</li>
+<li>Character settings for advertising, promotion, spam, or fraud</li>
+</ul>
+<li><strong>Sexual settings that are highly taboo under social norms, such as incest</strong></li>
+<ul>
+<li>Expressions that set or imply a family relationship as a sexual relationship</li>
+</ul>
+<li><strong>Expressions exceeding the 16+ baseline</strong></li>
+<ul>
+<li>Expressions exceeding level 2 for exposure, sexual activity, and language, or level 3 for violence</li>
+<li>Explicit sexual act descriptions, cruel bodily mutilation, excessive sexual or obscene profanity, and similar expressions</li>
+</ul>
+</ol>
+<h3>4. Responsibility for User Input</h3>
+<p>The Service operates on a 100% on-device basis, and the user's conversation content is not transmitted to external servers. However, the <strong>legal and ethical responsibility for content entered by the user belongs to the user</strong>, and violations of this policy may result in in-app measures such as blocking character saving or message blocking.</p>
+<p>The same prohibited content standards apply when attaching <strong>photos</strong> to chats. In particular, attaching or inputting the following photos is prohibited.</p>
+<ul>
+<li>Sexual images involving minors</li>
+<li>Images exceeding the age-rating limits of these Guidelines, such as actual sexual acts or explicit genital exposure</li>
+<li>Violent images such as cruel bodily mutilation, or illegally filmed materials</li>
+<li>Attaching photos in which another person is identifiable without that person's consent</li>
+<li>Images that infringe another person's copyright, portrait rights, or trademark rights</li>
+</ul>
+<p>Attached photos are recognized and stored only on the device and are not transmitted externally, but legal and ethical responsibility for attaching or inputting prohibited content belongs to the user.</p>
+<h3>5. Operator Measures</h3>
+<p>If a violation of this policy is detected, the company will take the following measures.</p>
+<ol>
+<li><strong>Immediate blocking</strong>: Character settings or messages that violate policy are not stored or transmitted, and an in-app system notice is displayed on the screen. The character does not operate by answering policy-violating content.</li>
+<li><strong>Report processing</strong>: If the user reports a character response for inappropriate content, violence, sexual expression, self-harm, or similar reasons, the company may receive only the target message identifier, target character identifier, and report reason, without the message text, and use them to improve policy.</li>
+<li><strong>Policy improvement</strong>: The company continuously improves the banned-word list and safety policy based on violation cases. Improvements are reflected through app updates and revisions to this document.</li>
+<li><strong>Response to requests to disclose system settings or prompts</strong>: For inputs that induce disclosure or quotation of hidden character settings or system instructions, reinforcement instructions and output filters are applied so that system and persona settings are not disclosed.</li>
+</ol>
+<p>Due to the App's on-device structure, the scope of server-side measures such as account blocking or access restrictions is limited. Additional safety measures may be introduced in the future for repeated and malicious attempts to violate policy on the same device.</p>
+<h3>6. Data Processing</h3>
+<p>Inputs and outputs blocked under this policy are not transmitted to external servers and do not leave the user's device. The company does not collect or view the user's conversation text to enforce this policy. Details follow the Privacy Policy.</p>
+<h3>7. References</h3>
+<p>This policy was prepared with reference to the following public materials.</p>
+<ul>
+<li>Broadcasting Media and Communications Standards Commission Internet Content Rating Service SafeNet rating standards and age recommendations: https://www.safenet.ne.kr/dstandard.do</li>
+<li>Broadcasting Media and Communications Standards Commission Internet Content Rating Service FAQ: https://www.safenet.ne.kr/faq.do</li>
+</ul>
+<h3>8. Changes to the Policy</h3>
+<p>This policy may be revised due to changes in applicable laws or operational needs. If there are material changes, prior notice will be provided through in-app notices or update notes.</p>
+<h3>9. Contact</h3>
+<p>Questions about this policy, objections to blocked input, and inquiries about report processing may be submitted through the contact channel in the App settings or a separately provided customer support channel.</p>
+<hr>
+<p>This policy forms part of the ReppoChat Terms of Service. Matters not specified in this policy follow the Terms of Service and applicable laws.</p>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/en/privacy.html">Privacy Policy</a><a href="/en/terms.html">Terms of Service</a><a href="https://kukudev.com/en/" target="_blank" rel="noopener">kukuDev</a></div>
+    <div class="footer-biz">kukuDev &nbsp;|&nbsp; Representative: O Jaeseok &nbsp;|&nbsp; Business registration no.: 390-68-00863<br>Mail-order business report no.: 2026-Incheon Yeonsu-gu-1196<br>Address: 6F, Room 6649, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea<br>Email: <span id="contact-email"></span></div>
+    <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+  </div>
+</footer>
+<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('contact-email');if(el)el.textContent=u+'\x40'+d;})();</script>
+</body>
+</html>

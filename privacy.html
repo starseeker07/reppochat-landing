@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<title>개인정보처리방침 — ReppoChat</title>
+<meta name="description" content="ReppoChat 개인정보처리방침">
+<link rel="canonical" href="https://reppochat.kukudev.com/privacy.html">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; frame-ancestors 'none';">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#05A66B;--primary-hover:#048C5A;--primary-tint:#E4F6EE;--secondary:#10367D;--canvas:#FFFFFF;--surface:#F9FAFB;--surface2:#F2F4F6;--hairline:#E5E8EB;--ink:#191F28;--ink-strong:#333D4B;--ink-muted:#4E5968;--ink-subtle:#8B95A1;--font-pre:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
+.nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
+.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
+.lang-toggle a,.lang-toggle span.active{padding:5px 8px;border-radius:7px}
+.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);text-decoration:none;background:var(--surface2)}
+.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:var(--hairline);font-size:11px}
+.doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
+.doc-head{padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid var(--hairline)}
+.doc-head .tag{display:inline-flex;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--primary-tint);border:1px solid rgba(5,166,107,.18);padding:5px 12px;border-radius:9999px;margin-bottom:14px}
+.content h1{font-size:30px;font-weight:800;letter-spacing:-0.6px;line-height:1.3;margin:0 0 6px}
+.content h2{font-size:22px;font-weight:800;letter-spacing:-0.4px;line-height:1.35;margin:44px 0 14px;padding-top:8px;color:var(--ink)}
+.content h3{font-size:17px;font-weight:700;line-height:1.45;margin:28px 0 10px;color:var(--ink-strong)}
+.content h4{font-size:15px;font-weight:700;margin:20px 0 8px;color:var(--ink-strong)}
+.content p{font-size:15px;color:var(--ink-strong);margin:0 0 12px;line-height:1.85}
+.content ol,.content ul{margin:0 0 14px;padding-left:24px}
+.content li{font-size:15px;color:var(--ink-strong);margin:0 0 7px;line-height:1.8}
+.content ol ol,.content ol ul,.content ul ul,.content ul ol{margin:7px 0 6px}
+.content strong{font-weight:700;color:var(--ink)}
+.content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--surface2);color:var(--primary-hover);padding:2px 6px;border-radius:6px}
+.content hr{border:none;border-top:1px solid var(--hairline);margin:36px 0}
+.content a{color:var(--primary)}
+.tbl-wrap{overflow-x:auto;margin:0 0 20px;border:1px solid var(--hairline);border-radius:14px}
+.content table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.content thead th{background:var(--surface);color:var(--ink);font-weight:700;text-align:left;padding:12px 14px;border-bottom:1px solid var(--hairline);white-space:nowrap}
+.content tbody td{padding:11px 14px;border-bottom:1px solid var(--hairline);color:var(--ink-strong);vertical-align:top;line-height:1.7}
+.content tbody tr:last-child td{border-bottom:none}
+.content tbody tr:nth-child(even){background:var(--surface)}
+.footer{background:var(--surface);border-top:1px solid var(--hairline);padding:40px 32px}
+.footer-inner{max-width:840px;margin:0 auto}
+.footer-links{display:flex;gap:20px;font-size:13px;margin-bottom:20px;flex-wrap:wrap}
+.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary)}
+.footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
+.footer-copy{font-size:12px;color:var(--ink-subtle)}
+@media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo"><img src="assets/logo.png" alt="ReppoChat"><span>레포챗</span></a>
+  <div class="nav-right">
+    <a href="/" class="nav-back">홈으로</a>
+    <div class="lang-toggle"><span class="active">한국어</span><span class="lang-sep">|</span><a href="/en/">English</a><span class="lang-sep">|</span><a href="/ja/">日本語</a></div>
+  </div>
+</nav>
+<main class="doc">
+  <div class="content">
+<h1>레포챗 개인정보처리방침</h1>
+<p>최종 업데이트: 2026년 6월 2일</p>
+<p>시행일: 2026년 6월 2일</p>
+<p>kukuDev("운영자")는 레포챗(ReppoChat) 모바일 애플리케이션("앱" 또는 "서비스") 이용자의 개인정보와 대화 프라이버시를 중요하게 생각합니다. 본 개인정보처리방침은 서비스 이용 과정에서 어떤 정보가 기기 안에 저장되고, 어떤 정보가 운영 또는 제3자 서비스 제공을 위해 전송·처리되는지 설명합니다.</p>
+<h2>1. 핵심 원칙</h2>
+<ol>
+<li>운영자는 이용자의 대화 본문, 프롬프트, AI 응답, 페르소나 상세 설정, 기억 슬롯 내용을 운영자 서버 또는 외부 AI API로 전송하지 않습니다.</li>
+<li>AI 응답 생성과 채팅에 첨부한 사진의 인식은 모델 파일 다운로드 이후 이용자의 기기 안에서 수행됩니다.</li>
+<li>대화 기록, 페르소나, 관계 상태, 장기 기억, 검색 인덱스는 이용자 기기의 암호화된 로컬 데이터베이스에 저장됩니다.</li>
+<li>서버로 전송되는 정보는 모델 다운로드, 광고, 결제 검증, 오류 분석, 신고 처리, 보안·남용 방지 등 서비스 운영에 필요한 메타데이터로 제한됩니다.</li>
+<li>서비스는 현재 별도의 회원 가입 또는 로그인 계정을 요구하지 않습니다. Google Play 결제, AdMob 광고, Firebase App Check 등 플랫폼 기능은 각 제공자의 계정·기기 체계와 연결될 수 있습니다.</li>
+</ol>
+<h2>2. 처리하는 정보와 이용 목적</h2>
+<h3>2.1 기기 안에만 저장되는 정보</h3>
+<p>다음 정보는 기본적으로 이용자의 기기 안에 저장되며, 운영자 서버나 외부 AI API로 전송되지 않습니다.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">구분</th><th style="text-align:left">처리 항목</th><th style="text-align:left">저장 위치</th><th style="text-align:left">이용 목적</th><th style="text-align:left">보유 기간</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">약관 동의 정보</td><td style="text-align:left">서비스 이용약관 동의 여부, 개인정보처리방침 동의 여부, 만 16세 이상 확인 여부, 동의 정책 버전</td><td style="text-align:left">SharedPreferences</td><td style="text-align:left">온보딩 완료 여부 확인, 정책 재동의 판단</td><td style="text-align:left">앱 데이터 삭제 또는 정책 재동의 전까지</td></tr>
+<tr><td style="text-align:left">페르소나 정보</td><td style="text-align:left">이름, 나이, 성별, 직업, 외모, 성격 태그, MBTI 축 값, 말투, 좋아하는 것, 싫어하는 것, 배경 서사, 아바타 이미지 경로</td><td style="text-align:left">SQLCipher 로컬 DB 및 앱 전용 파일 영역</td><td style="text-align:left">AI 캐릭터 생성, 채팅 프롬프트 조립, 친구 목록 표시</td><td style="text-align:left">이용자가 삭제하거나 앱 데이터를 삭제할 때까지</td></tr>
+<tr><td style="text-align:left">이용자 관계 설정</td><td style="text-align:left">이용자 성별, 이용자 나이대, 페르소나의 역할, 이용자의 역할, 초기 친밀도</td><td style="text-align:left">SQLCipher 로컬 DB</td><td style="text-align:left">페르소나가 이용자를 부르는 방식과 관계 상태 유지</td><td style="text-align:left">페르소나 삭제, 관계 리셋, 앱 데이터 삭제 전까지</td></tr>
+<tr><td style="text-align:left">대화 정보</td><td style="text-align:left">이용자 메시지, AI 응답, 메시지 생성 시각, 대화방, 검색용 FTS 인덱스</td><td style="text-align:left">SQLCipher 로컬 DB</td><td style="text-align:left">대화 표시, 최근 대화 컨텍스트 구성, 로컬 검색</td><td style="text-align:left">메시지/채팅방/페르소나 삭제 또는 앱 데이터 삭제 전까지</td></tr>
+<tr><td style="text-align:left">채팅 첨부 이미지</td><td style="text-align:left">이용자가 첨부한 사진을 정사각형 PNG로 재인코딩한 이미지 파일, 해당 메시지의 이미지 경로</td><td style="text-align:left">앱 전용 파일 영역 및 SQLCipher 로컬 DB</td><td style="text-align:left">사진을 보여주며 대화(기기 안 비전 인식)</td><td style="text-align:left">메시지/채팅방/페르소나 삭제 또는 앱 데이터 삭제 전까지</td></tr>
+<tr><td style="text-align:left">메모리 정보</td><td style="text-align:left">장기 기억 슬롯, 중요 사실, 선호, 주요 사건, 약속, 감정 상태, 고정 여부, 중요도 점수</td><td style="text-align:left">SQLCipher 로컬 DB</td><td style="text-align:left">관계 발전, 장기 기억 기반 응답, 기억 관리 화면 제공</td><td style="text-align:left">기억 삭제, 관계 리셋, 페르소나 삭제 또는 앱 데이터 삭제 전까지</td></tr>
+<tr><td style="text-align:left">앱 잠금 정보</td><td style="text-align:left">PIN 해시, 생체 인증 사용 여부, PIN 실패 횟수, 재시도 쿨다운 시각</td><td style="text-align:left">기기 보안 저장소</td><td style="text-align:left">앱 잠금, PIN 검증, 반복 실패 시 짧은 재시도 지연(최대 30초, 영구 잠금 아님)</td><td style="text-align:left">이용자가 잠금 해제 설정을 삭제하거나 앱 데이터를 삭제할 때까지</td></tr>
+<tr><td style="text-align:left">광고 제거 로컬 상태</td><td style="text-align:left">광고 제거 적용 여부, 구매 토큰 사본</td><td style="text-align:left">기기 보안 저장소</td><td style="text-align:left">구매 적용 상태 유지, 재실행 시 광고 숨김</td><td style="text-align:left">구매 상태 삭제 또는 앱 데이터 삭제 전까지</td></tr>
+<tr><td style="text-align:left">모델 파일 및 실행 설정</td><td style="text-align:left">모델 파일, 모델 ID, SHA-256, 파일 크기 검증 표식, active model, 모델별 CPU/GPU 설정</td><td style="text-align:left">앱 전용 파일 영역 및 SharedPreferences</td><td style="text-align:left">오프라인 AI 추론, 모델 무결성 확인, 로컬 실행 설정 유지</td><td style="text-align:left">이용자가 모델 파일 또는 앱 데이터를 삭제할 때까지</td></tr>
+<tr><td style="text-align:left">로컬 신고 큐</td><td style="text-align:left">대상 메시지 ID, 대상 페르소나 ID, 신고 사유, 상태, 신고 시각</td><td style="text-align:left">SQLCipher 로컬 DB</td><td style="text-align:left">오프라인 신고 큐, 재전송, 신고 rate limit</td><td style="text-align:left">전송 완료, 만료 처리, 앱 데이터 삭제 전까지</td></tr>
+<tr><td style="text-align:left">백업 파일</td><td style="text-align:left">페르소나, 관계 상태, 채팅 세션, 메시지, 기억 슬롯, 아바타 이미지, 채팅 첨부 이미지 데이터가 암호화된 <code>.reppo</code> 파일</td><td style="text-align:left">이용자가 선택한 공유·저장 위치</td><td style="text-align:left">데이터 이전, 보관, 복원</td><td style="text-align:left">이용자가 백업 파일을 삭제할 때까지</td></tr>
+</tbody></table></div>
+<h3>2.2 서버 또는 제3자 서비스로 전송될 수 있는 정보</h3>
+<p>다음 정보는 서비스 운영에 필요한 범위에서 운영자 서버 또는 제3자 서비스로 전송될 수 있습니다.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">구분</th><th style="text-align:left">전송 항목</th><th style="text-align:left">전송 대상</th><th style="text-align:left">이용 목적</th><th style="text-align:left">보유 기간</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">모델 다운로드 설정</td><td style="text-align:left">앱 버전, Firebase Remote Config 요청 정보, 모델 ID, 모델 파일명, 모델 크기, SHA-256 등 구성값 조회에 필요한 정보</td><td style="text-align:left">Firebase Remote Config</td><td style="text-align:left">현재 제공 모델 확인, 다운로드 활성화 여부 확인, 강제 업데이트 판단</td><td style="text-align:left">Firebase 설정 및 로그 정책에 따름</td></tr>
+<tr><td style="text-align:left">모델 URL 요청</td><td style="text-align:left">Firebase App Check 토큰, 앱 설치 해시, 요청 모델 ID, 네트워크 요청 IP 등 HTTP 메타데이터</td><td style="text-align:left">Cloudflare Worker, Firebase App Check</td><td style="text-align:left">정품 앱 확인, presigned URL 발급, 다운로드 남용 방지, rate limit</td><td style="text-align:left">남용 방지 및 로그 보관에 필요한 기간</td></tr>
+<tr><td style="text-align:left">모델 파일 다운로드</td><td style="text-align:left">presigned URL 요청, 다운로드 바이트, IP 등 네트워크 메타데이터</td><td style="text-align:left">Cloudflare R2</td><td style="text-align:left">모델 파일 제공</td><td style="text-align:left">Cloudflare 로그 및 보안 정책에 따름</td></tr>
+<tr><td style="text-align:left">신고 정보</td><td style="text-align:left">대상 메시지 ID, 대상 페르소나 ID, 신고 사유, 생성 시각, source=android</td><td style="text-align:left">Firebase Cloud Functions, Firestore</td><td style="text-align:left">부적절한 응답 신고 접수, 안전 정책 개선, 악용 방지</td><td style="text-align:left">최대 90일 보관 후 파기하는 정책으로 운영</td></tr>
+<tr><td style="text-align:left">결제 검증</td><td style="text-align:left">Google Play 상품 ID, 구매 토큰, 주문 ID, 구매 검증 결과, 검증 시각</td><td style="text-align:left">Firebase Cloud Functions, Google Play Developer API, Firestore</td><td style="text-align:left">광고 제거 구매 검증, 중복 토큰 방지, 구매 복원</td><td style="text-align:left">구매 권한 유지·복원 및 법령상 보관 필요 기간</td></tr>
+<tr><td style="text-align:left">광고 정보</td><td style="text-align:left">광고 ID, 기기 정보, 광고 요청·노출·클릭 등 광고 상호작용 정보</td><td style="text-align:left">Google AdMob</td><td style="text-align:left">광고 제공, 부정 트래픽 방지, 광고 성과 측정</td><td style="text-align:left">Google AdMob 정책에 따름</td></tr>
+<tr><td style="text-align:left">오류 및 크래시 정보</td><td style="text-align:left">앱 버전, OS 버전, 기기 상태, 스택트레이스, 오류 유형, 모델 다운로드 실패 유형, 기기 무결성 상태</td><td style="text-align:left">Firebase Crashlytics</td><td style="text-align:left">오류 분석, 안정성 개선, 비정상 기기 환경 파악</td><td style="text-align:left">Firebase Crashlytics 설정 및 보관 정책에 따름</td></tr>
+<tr><td style="text-align:left">앱 무결성 정보</td><td style="text-align:left">Firebase App Check 토큰, Play Integrity 검증 관련 정보</td><td style="text-align:left">Firebase App Check</td><td style="text-align:left">비정상 앱·자동화 요청 방지, Cloud Functions 및 Worker 보호</td><td style="text-align:left">Firebase 정책에 따름</td></tr>
+</tbody></table></div>
+<p>운영자는 신고, 오류 분석, 모델 다운로드, 결제 검증 과정에서 대화 본문, 프롬프트, AI 응답, 페르소나 상세 설정, 기억 슬롯 내용을 의도적으로 수집하지 않습니다. 채팅에 첨부한 사진은 기기 안에서만 저장·인식되며, 신고를 포함한 어떤 경로로도 운영자 서버나 제3자에게 전송되지 않습니다.</p>
+<h2>3. 수집하지 않는 정보</h2>
+<p>운영자는 서비스의 현재 구조에서 다음 정보를 직접 수집하지 않습니다.</p>
+<ol>
+<li>회원 가입용 이메일, 비밀번호, 전화번호, 주소</li>
+<li>실명 인증 정보, 주민등록번호, 여권번호, 운전면허번호</li>
+<li>신용카드 번호, 계좌번호 등 결제 수단 원문</li>
+<li>대화 본문, 프롬프트, AI 응답, 페르소나 상세 설정, 기억 슬롯의 서버 저장본</li>
+<li>사용자의 연락처, 주소록, SMS, 통화 기록</li>
+<li>GPS 기반 정밀 위치정보</li>
+<li>생체 인증 원본 데이터</li>
+<li>카메라 촬영 데이터. 아바타 이미지와 채팅 첨부 사진은 모두 이용자가 갤러리에서 선택한 이미지를 앱 전용 저장소에 재인코딩해 저장하며, 채팅 첨부 사진의 인식도 기기 안에서만 수행되고 서버로 전송되지 않습니다.</li>
+</ol>
+<p>Google Play, Google AdMob, Firebase, Cloudflare 등 제3자 서비스가 자체 정책에 따라 처리하는 정보는 각 제공자의 정책이 함께 적용됩니다.</p>
+<h2>4. 로컬 데이터 처리</h2>
+<ol>
+<li>앱은 <code>reppochat.db</code> 로컬 데이터베이스를 사용하며, 데이터베이스 키는 기기 보안 저장소에 저장됩니다.</li>
+<li>대화, 페르소나, 관계 상태, 기억 슬롯, 신고 큐, 검색 인덱스는 SQLCipher 기반 암호화 DB에 저장됩니다.</li>
+<li>페르소나 아바타 이미지는 앱 전용 파일 영역에 저장되며, 앱은 이미지를 JPEG로 재인코딩하여 EXIF 등 메타데이터가 남지 않도록 처리합니다. 채팅에 첨부한 사진도 같은 방식으로 정사각형 PNG로 재인코딩하여 EXIF 등 메타데이터를 제거하고, 사진 인식은 기기 안에서만 수행됩니다.</li>
+<li>이용자가 메시지를 삭제하면 해당 메시지는 로컬 DB에서 삭제되고, 메시지에 첨부된 사진 파일도 함께 삭제됩니다.</li>
+<li>이용자가 채팅방을 삭제하면 해당 채팅 세션과 메시지, 첨부 사진 파일이 삭제되고, 해당 페르소나의 관계 상태와 기억 슬롯이 초기화됩니다.</li>
+<li>이용자가 페르소나를 삭제하면 페르소나, 관계 상태, 채팅 세션, 메시지, 기억 슬롯, 아바타 파일, 채팅 첨부 사진 파일이 함께 삭제됩니다.</li>
+<li>이용자가 관계를 리셋하면 관계 상태와 기억 슬롯은 초기화되고 기존 메시지는 이후 AI 컨텍스트에서 제외됩니다.</li>
+<li>앱 삭제, 앱 데이터 삭제, 기기 초기화, 기기 분실, 백업 비밀번호 분실이 발생하면 운영자는 로컬 데이터를 복구할 수 없습니다.</li>
+</ol>
+<h2>5. 백업 파일 처리</h2>
+<ol>
+<li>앱은 <code>.reppo</code> 확장자의 백업 파일 내보내기 및 가져오기 기능을 제공합니다.</li>
+<li>백업 파일에는 페르소나, 관계 상태, 채팅 세션, 메시지, 기억 슬롯, 아바타 이미지, 채팅 첨부 이미지 데이터가 포함될 수 있습니다.</li>
+<li>신고 로그는 백업 파일에 포함되지 않습니다.</li>
+<li>백업 파일은 이용자가 입력한 백업 비밀번호를 기반으로 PBKDF2-HMAC-SHA256 키 파생과 AES-256-GCM 암호화를 적용합니다.</li>
+<li>운영자는 백업 비밀번호를 저장하지 않으며, 백업 파일의 내용을 서버로 업로드하지 않습니다.</li>
+<li>이용자가 백업 파일을 외부 앱, 클라우드, 메신저, 이메일, 파일 공유 기능으로 저장·전송하는 경우 해당 위치에서의 보안과 삭제는 이용자 책임입니다.</li>
+</ol>
+<h2>6. 신고 처리</h2>
+<ol>
+<li>이용자는 AI 응답이 부적절하다고 판단되는 경우 앱 내 신고 기능을 사용할 수 있습니다.</li>
+<li>신고 시 전송되는 정보는 대상 메시지 ID, 대상 페르소나 ID, 신고 사유, 생성 시각, 플랫폼 정보로 제한됩니다.</li>
+<li>신고 기능은 메시지 본문, 프롬프트, AI 응답 원문, 페르소나 상세 설정, 기억 슬롯, 원시 기기 식별자를 전송하지 않습니다.</li>
+<li>신고 사유는 부적절한 내용, 폭력, 성적 표현, 자해, 기타 등 앱에서 정한 범주 중 선택하는 방식으로 제한됩니다.</li>
+<li>신고는 네트워크가 없거나 서버 전송에 실패한 경우 로컬 큐에 보관되었다가 재시도될 수 있습니다.</li>
+<li>신고 남용 방지를 위해 앱은 분당, 시간당, 일간, 주간, 월간 신고 횟수를 제한합니다.</li>
+</ol>
+<h2>7. 결제 및 광고 제거 처리</h2>
+<ol>
+<li>광고 제거 상품은 Google Play 인앱 결제를 통해 제공됩니다.</li>
+<li>운영자는 결제 수단 원문, 카드번호, 계좌번호를 직접 수집하거나 저장하지 않습니다. 결제 처리는 Google Play가 담당합니다.</li>
+<li>앱은 광고 제거 구매 검증을 위해 상품 ID와 Google Play 구매 토큰을 Firebase Cloud Functions로 전송합니다.</li>
+<li>Cloud Functions는 Google Play Developer API를 통해 구매 유효성을 검증하고, 중복 토큰 사용 방지를 위해 구매 토큰, 상품 ID, 주문 ID, 검증 시각을 Firestore에 기록할 수 있습니다.</li>
+<li>구매 검증이 성공하면 앱은 광고 제거 적용 상태와 구매 토큰 사본을 기기 보안 저장소에 보관할 수 있습니다.</li>
+<li>새 기기 또는 재설치 후 구매 복원을 위해 Google Play 구매 이력과 서버 검증 정보가 사용될 수 있습니다.</li>
+<li>환불, 결제 취소, 결제 실패, 결제 수단 오류, 영수증 검증 실패는 Google Play 정책과 관련 법령을 따릅니다.</li>
+</ol>
+<h2>8. 광고 처리</h2>
+<ol>
+<li>무료 이용자에게는 Google AdMob 광고가 표시될 수 있습니다.</li>
+<li>Google AdMob은 광고 게재, 부정 트래픽 방지, 광고 빈도 조절, 광고 성과 측정을 위해 광고 ID, 기기 정보, IP 주소, 앱 정보, 광고 상호작용 정보를 처리할 수 있습니다.</li>
+<li>광고 맞춤 설정 및 광고 ID 재설정은 이용자의 기기 설정 또는 Google 광고 설정을 통해 관리할 수 있습니다.</li>
+<li>광고 제거 상품을 구매한 경우 앱은 광고 컨테이너를 숨기거나 광고 요청을 중단합니다.</li>
+<li>앱은 대화 본문, 프롬프트, AI 응답, 페르소나 상세 설정, 기억 슬롯을 광고 타겟팅 목적으로 운영자 서버에 전송하지 않습니다.</li>
+</ol>
+<h2>9. 오류 분석 및 보안</h2>
+<ol>
+<li>앱은 안정성 개선을 위해 Firebase Crashlytics를 사용할 수 있습니다.</li>
+<li>Crashlytics에는 앱 버전, OS 버전, 기기 상태, 스택트레이스, 오류 유형, 모델 다운로드 실패 유형, 기기 무결성 상태 등이 기록될 수 있습니다.</li>
+<li>운영자는 Crashlytics에 대화 본문, 프롬프트, AI 응답, 페르소나 상세 설정, 기억 슬롯을 기록하지 않도록 설계합니다.</li>
+<li>앱은 루팅·에뮬레이터 등 비정상 기기 환경을 감지할 수 있습니다. 현재 정책상 감지 결과는 사용자 차단보다 안정성·보안 분석 목적으로 사용됩니다.</li>
+<li>앱은 Firebase App Check와 Cloudflare Worker rate limit을 사용하여 비정상 앱, 자동화 요청, 모델 다운로드 남용을 제한할 수 있습니다.</li>
+</ol>
+<h2>10. Android 권한</h2>
+<p>앱은 기능 제공을 위해 다음 Android 권한을 사용할 수 있습니다.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">권한</th><th style="text-align:left">이용 목적</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left"><code>POST_NOTIFICATIONS</code></td><td style="text-align:left">내부 GGUF fallback 추론 서비스가 활성화되는 경우 AI 응답 생성 상태를 알림으로 표시하기 위한 목적. 마케팅 알림 및 모델 다운로드 진행률 표시 목적이 아닙니다. 현재 앱은 런타임 알림 권한을 요청하지 않습니다.</td></tr>
+</tbody></table></div>
+<p>앱은 현재 연락처, 마이크, 카메라 촬영, 정밀 위치 권한을 핵심 기능에 사용하지 않습니다. 아바타 이미지와 채팅 첨부 사진은 모두 갤러리 이미지 선택 기능(시스템 사진 선택기)을 통해 이용자가 직접 선택한 파일을 처리하므로 별도의 저장소 접근 권한을 요구하지 않습니다.</p>
+<h2>11. 제3자 제공 및 처리위탁</h2>
+<p>서비스 제공 과정에서 다음 제3자 서비스가 사용됩니다.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">제공자</th><th style="text-align:left">사용 서비스</th><th style="text-align:left">처리 목적</th><th style="text-align:left">주요 처리 정보</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">Google/Firebase</td><td style="text-align:left">App Check, Remote Config, Cloud Functions, Firestore, Crashlytics</td><td style="text-align:left">앱 무결성 확인, 모델 설정 제공, 신고 접수, 결제 검증 함수, 오류 분석</td><td style="text-align:left">App Check 토큰, 신고 메타데이터, 구매 토큰, 오류 정보</td></tr>
+<tr><td style="text-align:left">Google Play</td><td style="text-align:left">인앱 결제, 구매 복원, 구매 검증 API</td><td style="text-align:left">광고 제거 결제 처리 및 복원</td><td style="text-align:left">구매 토큰, 상품 ID, 주문 정보</td></tr>
+<tr><td style="text-align:left">Google AdMob</td><td style="text-align:left">모바일 광고</td><td style="text-align:left">광고 게재, 부정 트래픽 방지, 광고 성과 측정</td><td style="text-align:left">광고 ID, 기기·광고 상호작용 정보</td></tr>
+<tr><td style="text-align:left">Cloudflare</td><td style="text-align:left">Workers, R2</td><td style="text-align:left">모델 파일 presigned URL 발급, 모델 파일 다운로드, rate limit</td><td style="text-align:left">App Check 검증 결과, 설치 해시, 모델 ID, IP 등 네트워크 메타데이터</td></tr>
+<tr><td style="text-align:left">운영체제 및 기기 제조사</td><td style="text-align:left">보안 저장소, 생체 인증, 로컬 파일, 공유 기능</td><td style="text-align:left">PIN 저장, 생체 인증 호출, 백업 공유, 로컬 파일 처리</td><td style="text-align:left">기기 내부 보안 저장값, 생체 인증 결과, 파일 경로</td></tr>
+</tbody></table></div>
+<p>운영자는 위 제3자 서비스에 대화 본문, 프롬프트, AI 응답, 페르소나 상세 설정, 기억 슬롯을 제공하지 않습니다.</p>
+<h2>12. 국외 이전</h2>
+<p>Firebase, Google Play, Google AdMob, Cloudflare 등 제3자 서비스는 대한민국 외 지역의 서버와 인프라에서 정보를 처리할 수 있습니다. 이에 따라 모델 다운로드 메타데이터, 신고 메타데이터, 결제 검증 정보, 광고 정보, 오류 정보가 Google 또는 Cloudflare가 운영하는 국가의 서버에서 처리될 수 있습니다. 각 제공자의 국외 이전, 보안, 보관 정책은 해당 제공자의 개인정보처리방침과 서비스 약관을 따릅니다.</p>
+<h2>13. 보유 및 파기</h2>
+<ol>
+<li>로컬 데이터는 이용자가 삭제하거나 앱 데이터를 삭제할 때까지 기기 안에 보관됩니다.</li>
+<li>페르소나, 메시지, 채팅방, 기억 슬롯, 관계 상태는 앱 내 삭제 또는 리셋 기능을 통해 삭제하거나 초기화할 수 있습니다.</li>
+<li><code>.reppo</code> 백업 파일은 이용자가 저장한 위치에 남아 있으며, 앱 내부 삭제 기능만으로 외부 저장 위치의 백업 파일이 삭제되지 않습니다.</li>
+<li>신고 메타데이터는 정책 개선과 대응을 위해 최대 90일 보관 후 파기하는 정책으로 운영됩니다.</li>
+<li>구매 검증 정보는 광고 제거 권한 유지, 구매 복원, 중복 토큰 방지, 결제 분쟁 대응, 법령상 의무 이행에 필요한 기간 동안 보관될 수 있습니다.</li>
+<li>Crashlytics 오류 정보, AdMob 광고 정보, Firebase App Check 및 Remote Config 정보, Cloudflare 로그는 각 제3자 서비스의 보관 정책과 운영자 설정에 따라 보관됩니다.</li>
+<li>법령에 따라 보관이 필요한 정보는 해당 법령에서 정한 기간 동안 보관한 뒤 파기합니다.</li>
+</ol>
+<h2>14. 이용자의 권리와 행사 방법</h2>
+<ol>
+<li>이용자는 앱 내 기능을 통해 페르소나, 메시지, 채팅방, 기억 슬롯, 모델 파일, 앱 잠금 설정, 백업 파일을 직접 관리할 수 있습니다.</li>
+<li>이용자는 앱 삭제 또는 OS의 앱 데이터 삭제 기능을 통해 로컬 데이터를 삭제할 수 있습니다.</li>
+<li>이용자는 광고 ID 재설정, 광고 맞춤 설정 제한, 알림 권한, 앱 권한을 기기 설정에서 관리할 수 있습니다.</li>
+<li>서버로 전송된 신고 메타데이터, 구매 검증 정보, 오류 정보에 대한 열람·정정·삭제 요청은 문의 이메일로 접수할 수 있습니다. 운영자는 본인 확인과 법령상 보관 필요 여부를 확인한 뒤 처리합니다.</li>
+<li>구매 권한 확인 또는 환불은 Google Play 계정 및 결제 정책에 따라 처리됩니다.</li>
+<li>이용자가 백업 비밀번호를 잃어버린 경우 운영자는 백업 파일을 복호화하거나 복구할 수 없습니다.</li>
+</ol>
+<h2>15. 아동의 개인정보</h2>
+<ol>
+<li>본 서비스는 만 16세 미만 아동을 대상으로 하지 않습니다.</li>
+<li>만 16세 미만 이용자는 서비스를 이용할 수 없으며, 보호자는 아동이 앱을 사용하지 않도록 기기와 앱 설치 상태를 관리해야 합니다.</li>
+<li>운영자가 만 16세 미만 아동의 서버 전송 메타데이터가 처리된 사실을 확인한 경우, 법령상 보관이 필요한 경우를 제외하고 합리적인 범위에서 삭제 조치를 진행합니다.</li>
+</ol>
+<h2>16. 안전한 이용을 위한 안내</h2>
+<ol>
+<li>앱 PIN과 기기 잠금을 설정하면 타인이 기기에서 앱을 열람하는 위험을 줄일 수 있습니다.</li>
+<li><code>.reppo</code> 백업 비밀번호는 다른 서비스 비밀번호와 다르게 설정하고, 분실하지 않도록 관리해야 합니다.</li>
+<li>백업 파일을 클라우드나 메신저로 공유하는 경우 해당 서비스의 보안 설정을 확인해야 합니다.</li>
+<li>다른 사람의 개인정보, 민감정보, 결제정보, 주소, 연락처, 계정 정보 등을 대화에 입력하지 않아야 합니다.</li>
+<li>AI 응답은 전문 상담이나 긴급 지원을 대체하지 않습니다. 자해·자살 위험, 폭력 위험, 의료·법률·금융 문제 등은 관계 기관 또는 전문가에게 도움을 요청해야 합니다.</li>
+</ol>
+<h2>17. 개인정보처리방침의 변경</h2>
+<ol>
+<li>운영자는 관련 법령, 서비스 기능, 제3자 SDK, 모델 다운로드 인프라, 광고 또는 결제 방식 변경에 따라 본 개인정보처리방침을 개정할 수 있습니다.</li>
+<li>중요한 변경이 있는 경우 앱 내 안내, 웹페이지, 업데이트 노트 또는 기타 합리적인 방법으로 고지합니다.</li>
+<li>변경된 방침에 동의하지 않는 이용자는 서비스 이용을 중단하고 앱 및 로컬 데이터를 삭제할 수 있습니다.</li>
+</ol>
+<h2>18. 문의 및 개인정보 보호책임자</h2>
+<p>개인정보 처리, 신고 데이터, 결제 검증 데이터, 오류 데이터, 본 방침에 관한 문의는 아래 연락처로 접수할 수 있습니다.</p>
+<ul>
+<li>운영자: 쿠쿠데브(kukuDev)</li>
+<li>개인정보 보호책임자: 오재석</li>
+<li>사업자등록번호: 390-68-00863</li>
+<li>통신판매업 신고번호: 제2026-인천연수구-1196호</li>
+<li>주소: 인천광역시 연수구 용담로 111, 6층 6649호</li>
+<li>이메일: support@kukudev.com</li>
+</ul>
+<p>개인정보 침해에 대한 신고나 상담이 필요한 경우 다음 기관을 이용할 수 있습니다.</p>
+<ul>
+<li>개인정보침해신고센터: privacy.kisa.or.kr / 국번없이 118</li>
+<li>개인정보분쟁조정위원회: kopico.go.kr / 1833-6972</li>
+</ul>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="https://kukudev.com/" target="_blank" rel="noopener">쿠쿠데브</a></div>
+    <div class="footer-biz">상호명: 쿠쿠데브(kukuDev) &nbsp;|&nbsp; 대표자: 오재석 &nbsp;|&nbsp; 사업자등록번호: 390-68-00863<br>통신판매업 신고번호: 제2026-인천연수구-1196호<br>주소: 인천광역시 연수구 용담로 111, 6층 6649호<br>이메일: <span id="contact-email"></span></div>
+    <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+  </div>
+</footer>
+<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('contact-email');if(el)el.textContent=u+'\x40'+d;})();</script>
+</body>
+</html>

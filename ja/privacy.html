@@ -8,7 +8,7 @@
 <title>プライバシーポリシー — ReppoChat</title>
 <meta name="description" content="ReppoChat プライバシーポリシー">
 <link rel="canonical" href="https://reppochat.kukudev.com/ja/privacy.html">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self'; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data:; frame-ancestors 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data:; frame-ancestors 'none';">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -68,8 +68,8 @@ img{max-width:100%;display:block}
 <main class="doc">
   <div class="content">
 <h1>ReppoChat プライバシーポリシー</h1>
-<p>最終更新日: 2026年6月2日</p>
-<p>適用開始日: 2026年6月2日</p>
+<p>最終更新日: 2026年6月18日</p>
+<p>適用開始日: 2026年6月18日</p>
 <p>kukuDev（以下「運営者」といいます）は、レポチャット（ReppoChat）モバイルアプリケーション（以下「アプリ」または「サービス」といいます）の利用者の個人情報と会話のプライバシーを重要に考えています。本プライバシーポリシーは、サービス利用の過程でどの情報が端末内に保存され、どの情報が運営または第三者サービス提供のために送信・処理されるかを説明するものです。</p>
 <h2>1. 基本原則</h2>
 <ol>
@@ -181,13 +181,8 @@ img{max-width:100%;display:block}
 <li>アプリはFirebase App CheckおよびCloudflare Worker rate limitを使用して、異常アプリ、自動化リクエスト、モデルダウンロード濫用を制限する場合があります。</li>
 </ol>
 <h2>10. Android権限</h2>
-<p>アプリは機能提供のため、次のAndroid権限を使用する場合があります。</p>
-<div class="tbl-wrap"><table>
-<thead><tr><th style="text-align:left">権限</th><th style="text-align:left">利用目的</th></tr></thead>
-<tbody>
-<tr><td style="text-align:left"><code>POST_NOTIFICATIONS</code></td><td style="text-align:left">内部GGUF fallback推論サービスが有効化される場合、AI応答生成状態を通知として表示するための目的。マーケティング通知およびモデルダウンロード進行率表示の目的ではありません。現在、アプリはランタイム通知権限を要求しません。</td></tr>
-</tbody></table></div>
-<p>アプリは現在、連絡先、マイク、カメラ撮影、精密位置情報の権限を主要機能に使用しません。アバター画像とチャット添付写真はいずれも、ギャラリー画像選択機能またはシステム写真選択ツールを通じて利用者が直接選択したファイルを処理するため、別途のストレージアクセス権限を要求しません。</p>
+<p>アプリは、連絡先、マイク、カメラ撮影、精密位置情報、通知などの機微なランタイム権限を主要機能のために直接要求しません。アバター画像とチャット添付写真はいずれも、ギャラリー画像選択機能またはシステム写真選択ツールを通じて利用者が直接選択したファイルを処理するため、別途のストレージアクセス権限を要求しません。</p>
+<p>ネットワーク通信、広告、生体認証などの一部の標準権限は、モデルダウンロード・広告・アプリロック機能のために第三者SDK(Firebase、Google AdMob、生体認証モジュールなど)が宣言する場合があり、その場合は本方針第11条の第三者処理範囲に従います。</p>
 <h2>11. 第三者提供および処理委託</h2>
 <p>サービス提供の過程で、次の第三者サービスが使用されます。</p>
 <div class="tbl-wrap"><table>

@@ -8,7 +8,7 @@
 <title>Privacy Policy — ReppoChat</title>
 <meta name="description" content="ReppoChat Privacy Policy">
 <link rel="canonical" href="https://reppochat.kukudev.com/en/privacy.html">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; frame-ancestors 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; frame-ancestors 'none';">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
 
@@ -68,8 +68,8 @@ img{max-width:100%;display:block}
 <main class="doc">
   <div class="content">
 <h1>ReppoChat Privacy Policy</h1>
-<p>Last updated: June 2, 2026</p>
-<p>Effective date: June 2, 2026</p>
+<p>Last updated: June 18, 2026</p>
+<p>Effective date: June 18, 2026</p>
 <p>kukuDev ("Operator") values the privacy of users of the ReppoChat mobile application ("App" or "Service") and the privacy of their conversations. This Privacy Policy explains what information is stored on the user's device and what information may be transmitted or processed for service operation or by third-party service providers.</p>
 <h2>1. Core Principles</h2>
 <ol>
@@ -181,13 +181,8 @@ img{max-width:100%;display:block}
 <li>The App may use Firebase App Check and Cloudflare Worker rate limits to restrict abnormal apps, automated requests, and model download abuse.</li>
 </ol>
 <h2>10. Android Permissions</h2>
-<p>The App may use the following Android permissions to provide features.</p>
-<div class="tbl-wrap"><table>
-<thead><tr><th style="text-align:left">Permission</th><th style="text-align:left">Purpose</th></tr></thead>
-<tbody>
-<tr><td style="text-align:left"><code>POST_NOTIFICATIONS</code></td><td style="text-align:left">Used to display AI response generation status as a notification if the internal GGUF fallback inference service is enabled. It is not used for marketing notifications or model download progress notifications. The App currently does not request the runtime notification permission.</td></tr>
-</tbody></table></div>
-<p>The App currently does not use contacts, microphone, camera capture, or precise location permissions for core features. Avatar images and chat attachment photos are processed from files directly selected by the user through the gallery image selection feature or the system photo picker, so the App does not require separate storage access permission.</p>
+<p>The App does not directly request sensitive runtime permissions such as contacts, microphone, camera capture, precise location, or notifications for its core features. Avatar images and chat attachment photos are processed from files directly selected by the user through the gallery image selection feature or the system photo picker, so the App does not require separate storage access permission.</p>
+<p>Certain standard permissions for network communication, advertising, and biometric authentication may be declared by third-party SDKs (such as Firebase, Google AdMob, and biometric modules) to support model downloads, advertising, and app lock features. In such cases, they are subject to the third-party processing scope described in Article 11 of this Policy.</p>
 <h2>11. Third-Party Provision and Processing</h2>
 <p>The following third-party services are used in providing the Service.</p>
 <div class="tbl-wrap"><table>

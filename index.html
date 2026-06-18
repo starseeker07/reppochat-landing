@@ -77,6 +77,7 @@
     h1, h2, h3, h4 { text-wrap: balance; word-break: keep-all; letter-spacing: -0.4px; }
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
+    code { font-family: inherit; }
 
     .hi { color: var(--primary); }
 
@@ -178,8 +179,8 @@
       position: absolute; bottom: 0; width: auto; transform-origin: bottom center;
       filter: drop-shadow(0 18px 40px rgba(25,31,40,.18));
     }
-    .cast .c-front { left: 4%; height: 88%; z-index: 3; }
-    .cast .c-back  { right: 2%; height: 80%; z-index: 2; opacity: .96; }
+    .cast .c-front { right: -4%; height: 80%; z-index: 3; }
+    .cast .c-back  { left: -2%; height: 72%; z-index: 2; opacity: .92; }
 
     /* ─── SECTION BASE ─── */
     .section-tag {
@@ -313,20 +314,20 @@
     .specs-foot { max-width: 1180px; margin: 0 auto; padding: 0 80px 10px; font-size: 13px; color: var(--ink-subtle); line-height: 1.7; }
 
     /* ─── DOWNLOAD CTA ─── */
-    .cta-outer { max-width: 1180px; margin: 0 auto; padding: 100px 80px; }
+    .cta-outer { max-width: 1180px; margin: 0 auto; padding: 60px 80px; }
     .cta-card {
-      position: relative; overflow: hidden; border-radius: 32px; text-align: center;
+      position: relative; overflow: hidden; border-radius: 26px; text-align: center;
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
-      padding: 80px 60px; color: #fff;
+      padding: 48px 44px; color: #fff;
     }
     .cta-card::before { content:''; position:absolute; top:-100px; left:-60px; width:380px; height:380px; background: radial-gradient(circle, rgba(255,255,255,.16) 0%, transparent 70%); pointer-events:none; }
     .cta-card::after { content:''; position:absolute; bottom:-120px; right:-60px; width:420px; height:420px; background: radial-gradient(circle, rgba(16,54,125,.3) 0%, transparent 70%); pointer-events:none; }
-    .cta-card h2 { font-size: 40px; font-weight: 800; line-height: 1.2; margin-bottom: 14px; position: relative; z-index: 1; }
-    .cta-card p { font-size: 18px; color: rgba(255,255,255,.85); margin-bottom: 36px; position: relative; z-index: 1; }
+    .cta-card h2 { font-size: 28px; font-weight: 800; line-height: 1.3; margin-bottom: 8px; position: relative; z-index: 1; }
+    .cta-card p { font-size: 15px; color: rgba(255,255,255,.85); margin-bottom: 24px; position: relative; z-index: 1; }
     .btn-cta-light {
-      display: inline-flex; align-items: center; gap: 11px; position: relative; z-index: 1;
-      background: #fff; color: var(--primary-hover); font-family: var(--font-pre); font-size: 18px; font-weight: 800;
-      padding: 18px 34px; border-radius: 9999px; box-shadow: 0 12px 30px rgba(0,0,0,.18);
+      display: inline-flex; align-items: center; gap: 10px; position: relative; z-index: 1;
+      background: #fff; color: var(--primary-hover); font-family: var(--font-pre); font-size: 16px; font-weight: 800;
+      padding: 14px 26px; border-radius: 9999px; box-shadow: 0 12px 30px rgba(0,0,0,.18);
       transition: transform .3s, box-shadow .3s;
     }
     .btn-cta-light:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(0,0,0,.24); }
@@ -388,8 +389,8 @@
       .hero-note { text-align: center; }
       .hero-right { position: relative; width: 100%; height: 420px; }
       .cast img { filter: drop-shadow(0 12px 28px rgba(25,31,40,.18)); }
-      .cast .c-front { height: 92%; left: 8%; }
-      .cast .c-back { height: 82%; right: 6%; }
+      .cast .c-front { height: 86%; right: 2%; left: auto; }
+      .cast .c-back { height: 60%; left: 2%; right: auto; opacity: .9; }
 
       .section-title, .privacy-head h2, .cta-card h2 { font-size: 30px; }
       .privacy-inner { padding: 64px 22px; }
@@ -458,10 +459,9 @@
   </a>
   <div class="nav-right">
     <div class="nav-section-links">
-      <a href="#privacy">프라이버시</a>
+      <a href="#privacy">오프라인 AI 채팅</a>
       <a href="#how">이용 방법</a>
       <a href="#features">주요 기능</a>
-      <a href="#cast">캐릭터</a>
     </div>
     <div class="lang-toggle">
       <span class="active">한국어</span><span class="lang-sep">|</span>
@@ -486,9 +486,8 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left" data-animate>
-    <span class="hero-badge"><iconify-icon icon="solar:shield-check-bold"></iconify-icon> 100% 온디바이스 · 오프라인</span>
-    <h1 class="hero-title">대화는 모두<br><span class="hi">내 기기 안에</span></h1>
-    <p class="hero-sub">외부로 보내지 않는 오프라인 AI 친구, 레포챗.<br>나만의 캐릭터를 만들고 인터넷 없이 기기 안에서 대화하세요.</p>
+    <h1 class="hero-title">오프라인으로 즐기는<br><span class="hi">로컬 AI 채팅</span></h1>
+    <p class="hero-sub">대화는 모두 내 기기 안에, 레포챗.<br>나만의 캐릭터를 만들고 인터넷 없이 기기 안에서 대화하세요.</p>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.reppochat" class="btn-cta" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
       Google Play에서 다운로드
@@ -650,27 +649,6 @@
         <p class="feat-desc">암호화된 <code>.reppo</code> 백업 파일로 다른 기기로 옮기거나 보관할 수 있어요. 백업 비밀번호는 본인만 알고 있으면 누구도 열 수 없어요.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ─── PERSONA CAST ─── -->
-<section class="cast-sec" id="cast">
-  <div class="cast-outer">
-    <div class="cast-head" data-animate>
-      <span class="section-tag">캐릭터</span>
-      <h2 class="section-title">먼저 만나볼 친구들</h2>
-    </div>
-    <div class="cast-grid">
-      <div class="pc" data-animate data-delay="1"><div class="cast-card"><img src="assets/personas/yoon_chaerin.png" alt="윤채린" loading="lazy"><span class="nm">윤채린</span></div></div>
-      <div class="pc" data-animate data-delay="1"><div class="cast-card"><img src="assets/personas/cha_yujin.png" alt="차유진" loading="lazy"><span class="nm">차유진</span></div></div>
-      <div class="pc" data-animate data-delay="2"><div class="cast-card"><img src="assets/personas/yuna.png" alt="유나" loading="lazy"><span class="nm">유나</span></div></div>
-      <div class="pc" data-animate data-delay="2"><div class="cast-card"><img src="assets/personas/miyu.png" alt="미유" loading="lazy"><span class="nm">미유</span></div></div>
-      <div class="pc" data-animate data-delay="1"><div class="cast-card"><img src="assets/personas/seo_doyoon.png" alt="서도윤" loading="lazy"><span class="nm">서도윤</span></div></div>
-      <div class="pc" data-animate data-delay="2"><div class="cast-card"><img src="assets/personas/kang_taeo.png" alt="강태오" loading="lazy"><span class="nm">강태오</span></div></div>
-      <div class="pc" data-animate data-delay="3"><div class="cast-card"><img src="assets/personas/ernhardt.png" alt="에른하르트" loading="lazy"><span class="nm">에른하르트</span></div></div>
-      <div class="pc" data-animate data-delay="3"><div class="cast-card" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--primary-tint),var(--surface2));"><div style="text-align:center;padding:18px"><iconify-icon icon="solar:add-circle-bold" style="font-size:38px;color:var(--primary)"></iconify-icon><div style="margin-top:8px;font-size:14px;font-weight:700;color:var(--ink-strong)">직접 만들기</div></div></div></div>
-    </div>
-    <p class="cast-note">기본 프리셋으로 시작하거나, 원하는 만큼 나만의 페르소나를 직접 만들 수 있어요.</p>
   </div>
 </section>
 

@@ -89,7 +89,7 @@ img{max-width:100%;display:block}
 <tr><td style="text-align:left">ペルソナ情報</td><td style="text-align:left">名前、年齢、性別、職業、外見、性格タグ、MBTI軸の値、話し方、好きなもの、嫌いなもの、背景設定、アバター画像パス</td><td style="text-align:left">SQLCipherローカルDBおよびアプリ専用ファイル領域</td><td style="text-align:left">AIキャラクター作成、チャットプロンプト組み立て、友だち一覧表示</td><td style="text-align:left">利用者が削除するか、アプリデータを削除するまで</td></tr>
 <tr><td style="text-align:left">利用者との関係設定</td><td style="text-align:left">利用者の性別、利用者の年齢層、ペルソナから見た利用者の役割、利用者から見たペルソナの役割、初期親密度</td><td style="text-align:left">SQLCipherローカルDB</td><td style="text-align:left">ペルソナが利用者と関係する方式および関係状態の維持</td><td style="text-align:left">ペルソナ削除、関係リセット、アプリデータ削除まで</td></tr>
 <tr><td style="text-align:left">会話情報</td><td style="text-align:left">利用者メッセージ、AI応答、メッセージ生成時刻、チャットルーム、検索用FTSインデックス</td><td style="text-align:left">SQLCipherローカルDB</td><td style="text-align:left">会話表示、最近の会話コンテキスト構成、ローカル検索</td><td style="text-align:left">メッセージ、チャットルーム、ペルソナ、またはアプリデータ削除まで</td></tr>
-<tr><td style="text-align:left">チャット添付画像</td><td style="text-align:left">利用者が添付した写真をPNGとして再エンコードした画像ファイル、該当メッセージの画像パス</td><td style="text-align:left">アプリ専用ファイル領域およびSQLCipherローカルDB</td><td style="text-align:left">写真を表示しながら会話し、端末内で画像認識を行うため</td><td style="text-align:left">メッセージ、チャットルーム、ペルソナ、またはアプリデータ削除まで</td></tr>
+<tr><td style="text-align:left">チャット添付画像</td><td style="text-align:left">利用者が添付した写真を元の縦横比のPNGとして再エンコードした(EXIF除去)画像ファイル、該当メッセージの画像パス</td><td style="text-align:left">アプリ専用ファイル領域およびSQLCipherローカルDB</td><td style="text-align:left">写真を表示しながら会話し、端末内で画像認識を行うため</td><td style="text-align:left">メッセージ、チャットルーム、ペルソナ、またはアプリデータ削除まで</td></tr>
 <tr><td style="text-align:left">メモリー情報</td><td style="text-align:left">長期記憶スロット、重要な事実、好み、主要な出来事、約束、感情状態、固定有無、重要度スコア</td><td style="text-align:left">SQLCipherローカルDB</td><td style="text-align:left">関係の発展、長期記憶に基づく応答、記憶管理画面の提供</td><td style="text-align:left">記憶削除、関係リセット、ペルソナ削除、またはアプリデータ削除まで</td></tr>
 <tr><td style="text-align:left">アプリロック情報</td><td style="text-align:left">PINハッシュ、生体認証利用有無、PIN失敗回数、再試行クールダウン時刻</td><td style="text-align:left">端末の安全な保存領域</td><td style="text-align:left">アプリロック、PIN検証、反復失敗時の短い再試行遅延（最大30秒、永久ロックではありません）</td><td style="text-align:left">利用者がロック解除設定を削除するか、アプリデータを削除するまで</td></tr>
 <tr><td style="text-align:left">広告削除ローカル状態</td><td style="text-align:left">広告削除の適用有無、購入トークンのコピー</td><td style="text-align:left">端末の安全な保存領域</td><td style="text-align:left">購入適用状態の維持、再起動時の広告非表示</td><td style="text-align:left">購入状態またはアプリデータ削除まで</td></tr>
@@ -105,7 +105,7 @@ img{max-width:100%;display:block}
 <tr><td style="text-align:left">モデルダウンロード設定</td><td style="text-align:left">アプリバージョン、Firebase Remote Configリクエスト情報、モデルID、モデルファイル名、モデルサイズ、SHA-256など構成値の取得に必要な情報</td><td style="text-align:left">Firebase Remote Config</td><td style="text-align:left">現在提供中のモデル確認、ダウンロード有効化有無確認、強制アップデート判断</td><td style="text-align:left">Firebase設定およびログポリシーに従う</td></tr>
 <tr><td style="text-align:left">モデルURLリクエスト</td><td style="text-align:left">Firebase App Checkトークン、アプリインストールハッシュ、リクエストしたモデルID、ネットワークリクエストIPなどのHTTPメタデータ</td><td style="text-align:left">Cloudflare Worker、Firebase App Check</td><td style="text-align:left">正規アプリ確認、presigned URL発行、ダウンロード不正利用防止、rate limit</td><td style="text-align:left">不正利用防止およびログ保管に必要な期間</td></tr>
 <tr><td style="text-align:left">モデルファイルダウンロード</td><td style="text-align:left">presigned URLリクエスト、ダウンロードバイト、IPなどのネットワークメタデータ</td><td style="text-align:left">Cloudflare R2</td><td style="text-align:left">モデルファイル提供</td><td style="text-align:left">Cloudflareログおよびセキュリティポリシーに従う</td></tr>
-<tr><td style="text-align:left">通報情報</td><td style="text-align:left">対象メッセージID、対象ペルソナID、通報理由、作成時刻、source=android</td><td style="text-align:left">Firebase Cloud Functions、Firestore</td><td style="text-align:left">不適切な応答の通報受付、安全ポリシー改善、不正利用防止</td><td style="text-align:left">最大90日保管後に破棄する方針で運用</td></tr>
+<tr><td style="text-align:left">通報情報</td><td style="text-align:left">対象メッセージID、対象ペルソナID、通報理由、作成時刻</td><td style="text-align:left">Firebase Cloud Functions、Firestore</td><td style="text-align:left">不適切な応答の通報受付、安全ポリシー改善、不正利用防止</td><td style="text-align:left">最大90日保管後に破棄する方針で運用</td></tr>
 <tr><td style="text-align:left">決済検証</td><td style="text-align:left">Google Play商品ID、購入トークン、注文ID、購入検証結果、検証時刻</td><td style="text-align:left">Firebase Cloud Functions、Google Play Developer API、Firestore</td><td style="text-align:left">広告削除購入の検証、重複トークン防止、購入復元</td><td style="text-align:left">購入権限の維持・復元および法令上必要な保管期間</td></tr>
 <tr><td style="text-align:left">広告情報</td><td style="text-align:left">広告ID、端末情報、広告リクエスト・表示・クリックなど広告相互作用情報</td><td style="text-align:left">Google AdMob</td><td style="text-align:left">広告提供、不正トラフィック防止、広告成果測定</td><td style="text-align:left">Google AdMobポリシーに従う</td></tr>
 <tr><td style="text-align:left">エラーおよびクラッシュ情報</td><td style="text-align:left">アプリバージョン、OSバージョン、端末状態、スタックトレース、エラー種類、モデルダウンロード失敗種類、端末完全性状態</td><td style="text-align:left">Firebase Crashlytics</td><td style="text-align:left">エラー分析、安定性改善、異常な端末環境の把握</td><td style="text-align:left">Firebase Crashlytics設定および保管ポリシーに従う</td></tr>
@@ -122,14 +122,14 @@ img{max-width:100%;display:block}
 <li>利用者の連絡先、アドレス帳、SMS、通話履歴</li>
 <li>GPSに基づく精密位置情報</li>
 <li>生体認証の原本データ</li>
-<li>カメラ撮影データ。アバター画像とチャット添付写真はいずれも、利用者がギャラリーから選択した画像をアプリ専用保存領域に再エンコードして保存するものであり、チャット添付写真の認識も端末内でのみ実行され、サーバーへ送信されません。</li>
+<li>写真・画像のサーバー収集。アバター画像はギャラリーから選択した画像を、チャット添付写真はギャラリーから選択するかシステムカメラアプリで撮影した画像をアプリ専用保存領域に再エンコードして保存し、いずれの場合もチャット添付写真の認識は端末内でのみ実行され、サーバーへ送信されません。</li>
 </ol>
 <p>Google Play、Google AdMob、Firebase、Cloudflareなどの第三者サービスが自らのポリシーに基づき処理する情報については、各提供者のポリシーもあわせて適用されます。</p>
 <h2>4. ローカルデータ処理</h2>
 <ol>
 <li>アプリは<code>reppochat.db</code>ローカルデータベースを使用し、データベースキーは端末の安全な保存領域に保存されます。</li>
 <li>会話、ペルソナ、関係状態、記憶スロット、通報キュー、検索インデックスはSQLCipherベースの暗号化DBに保存されます。</li>
-<li>ペルソナのアバター画像はアプリ専用ファイル領域に保存され、アプリは画像をJPEGとして再エンコードし、EXIFなどのメタデータが残らないよう処理します。チャットに添付した写真も同様にPNGとして再エンコードしてEXIFなどのメタデータを削除し、写真認識は端末内でのみ実行されます。</li>
+<li>ペルソナのアバター画像はアプリ専用ファイル領域に保存され、アプリは画像をJPEGとして再エンコードし、EXIFなどのメタデータが残らないよう処理します。チャットに添付した写真も同様に元の縦横比のPNGとして再エンコードしてEXIFなどのメタデータを削除し、写真認識は端末内でのみ実行されます。</li>
 <li>利用者がメッセージを削除すると、該当メッセージはローカルDBから削除され、メッセージに添付された写真ファイルもあわせて削除されます。</li>
 <li>利用者がチャットルームを削除すると、該当チャットセッション、メッセージ、添付写真ファイルが削除され、該当ペルソナの関係状態と記憶スロットが初期化されます。</li>
 <li>利用者がペルソナを削除すると、ペルソナ、関係状態、チャットセッション、メッセージ、記憶スロット、アバターファイル、チャット添付写真ファイルがあわせて削除されます。</li>
@@ -181,7 +181,7 @@ img{max-width:100%;display:block}
 <li>アプリはFirebase App CheckおよびCloudflare Worker rate limitを使用して、異常アプリ、自動化リクエスト、モデルダウンロード濫用を制限する場合があります。</li>
 </ol>
 <h2>10. Android権限</h2>
-<p>アプリは、連絡先、マイク、カメラ撮影、精密位置情報、通知などの機微なランタイム権限を主要機能のために直接要求しません。アバター画像とチャット添付写真はいずれも、ギャラリー画像選択機能またはシステム写真選択ツールを通じて利用者が直接選択したファイルを処理するため、別途のストレージアクセス権限を要求しません。</p>
+<p>アプリは、連絡先、マイク、精密位置情報、通知などの機微なランタイム権限を主要機能のために直接要求しません。アバター画像はギャラリー画像選択機能(システム写真選択ツール)を通じて、チャット添付写真はシステム写真選択ツールまたはシステムカメラアプリを通じて利用者が直接選択または撮影したファイルを処理します。カメラ撮影は外部カメラアプリに委任されるため、アプリはカメラ権限を直接宣言せず、写真選択も別途のストレージアクセス権限を要求しません。</p>
 <p>ネットワーク通信、広告、生体認証などの一部の標準権限は、モデルダウンロード・広告・アプリロック機能のために第三者SDK(Firebase、Google AdMob、生体認証モジュールなど)が宣言する場合があり、その場合は本方針第11条の第三者処理範囲に従います。</p>
 <h2>11. 第三者提供および処理委託</h2>
 <p>サービス提供の過程で、次の第三者サービスが使用されます。</p>

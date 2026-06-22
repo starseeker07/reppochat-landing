@@ -20,13 +20,11 @@ body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-
 a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
-.nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
+.nav-logo{display:flex;align-items:center;gap:9px;min-width:0}.nav-logo img{height:26px;flex:0 0 auto}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px;white-space:nowrap}
 .nav-right{display:flex;align-items:center;gap:14px}
 .nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
-.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
-.lang-toggle a,.lang-toggle span.active{padding:5px 8px;border-radius:7px}
-.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);text-decoration:none;background:var(--surface2)}
-.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:var(--hairline);font-size:11px}
+.lang-select{font-family:var(--font-pre);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface2);border:1px solid var(--hairline);border-radius:9px;padding:6px 28px 6px 11px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238B95A1' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:12px}
+.lang-select:hover{border-color:var(--ink-subtle)}
 .doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
 .doc-head{padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid var(--hairline)}
 .doc-head .tag{display:inline-flex;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--primary-tint);border:1px solid rgba(5,166,107,.18);padding:5px 12px;border-radius:9999px;margin-bottom:14px}
@@ -54,7 +52,7 @@ img{max-width:100%;display:block}
 .footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary)}
 .footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
 .footer-copy{font-size:12px;color:var(--ink-subtle)}
-@media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
+@media (max-width:768px){.nav{padding:0 16px}.nav-logo span{font-size:17px}.nav-right{gap:10px}.nav-back{font-size:13px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
 </style>
 </head>
 <body>
@@ -62,7 +60,7 @@ img{max-width:100%;display:block}
   <a href="/ja/" class="nav-logo"><img src="/assets/logo.png" alt="ReppoChat"><span>レポチャット</span></a>
   <div class="nav-right">
     <a href="/ja/" class="nav-back">ホーム</a>
-    <div class="lang-toggle"><a href="/">한국어</a><span class="lang-sep">|</span><a href="/en/">English</a><span class="lang-sep">|</span><span class="active">日本語</span></div>
+    <select class="lang-select" onchange="location.href=this.value" aria-label="Language"><option value="/privacy.html">한국어</option><option value="/en/privacy.html">English</option><option value="/ja/privacy.html" selected>日本語</option></select>
   </div>
 </nav>
 <main class="doc">
@@ -236,8 +234,21 @@ img{max-width:100%;display:block}
 <li>重要な変更がある場合、アプリ内案内、ウェブページ、アップデートノート、またはその他合理的な方法で告知します。</li>
 <li>変更後のポリシーに同意しない利用者は、サービス利用を中止し、アプリおよびローカルデータを削除できます。</li>
 </ol>
-<h2>18. お問い合わせ</h2>
-<p>本プライバシーポリシーについてご質問がある場合は、次のメールアドレスまでお問い合わせください: <a href="mailto:support@kukudev.com">support@kukudev.com</a></p>
+<h2>18. 問い合わせおよび個人情報保護責任者</h2>
+<p>個人情報処理、通報データ、決済検証データ、エラーデータ、本ポリシーに関する問い合わせは、下記連絡先で受け付けます。</p>
+<ul>
+<li>運営者: kukuDev（ククデブ）</li>
+<li>個人情報保護責任者: O Jaeseok</li>
+<li>事業者登録番号: 390-68-00863</li>
+<li>通信販売業届出番号: 2026-Incheon Yeonsu-gu-1196</li>
+<li>住所: 大韓民国 仁川広域市 延寿区 龍潭路111, 6階 6649号</li>
+<li>メール: support@kukudev.com</li>
+</ul>
+<p>個人情報侵害に関する申告または相談が必要な場合、次の機関を利用できます。</p>
+<ul>
+<li>個人情報侵害申告センター: privacy.kisa.or.kr / 韓国内局番なし118</li>
+<li>個人情報紛争調停委員会: kopico.go.kr / 1833-6972</li>
+</ul>
   </div>
 </main>
 <footer class="footer">

@@ -20,13 +20,11 @@ body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-
 a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
-.nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
+.nav-logo{display:flex;align-items:center;gap:9px;min-width:0}.nav-logo img{height:26px;flex:0 0 auto}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px;white-space:nowrap}
 .nav-right{display:flex;align-items:center;gap:14px}
 .nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
-.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
-.lang-toggle a,.lang-toggle span.active{padding:5px 8px;border-radius:7px}
-.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);text-decoration:none;background:var(--surface2)}
-.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:var(--hairline);font-size:11px}
+.lang-select{font-family:var(--font-pre);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface2);border:1px solid var(--hairline);border-radius:9px;padding:6px 28px 6px 11px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238B95A1' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:12px}
+.lang-select:hover{border-color:var(--ink-subtle)}
 .doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
 .doc-head{padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid var(--hairline)}
 .doc-head .tag{display:inline-flex;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--primary-tint);border:1px solid rgba(5,166,107,.18);padding:5px 12px;border-radius:9999px;margin-bottom:14px}
@@ -54,7 +52,7 @@ img{max-width:100%;display:block}
 .footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary)}
 .footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
 .footer-copy{font-size:12px;color:var(--ink-subtle)}
-@media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
+@media (max-width:768px){.nav{padding:0 16px}.nav-logo span{font-size:17px}.nav-right{gap:10px}.nav-back{font-size:13px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
 </style>
 </head>
 <body>
@@ -62,7 +60,7 @@ img{max-width:100%;display:block}
   <a href="/en/" class="nav-logo"><img src="/assets/logo.png" alt="ReppoChat"><span>ReppoChat</span></a>
   <div class="nav-right">
     <a href="/en/" class="nav-back">Home</a>
-    <div class="lang-toggle"><a href="/">한국어</a><span class="lang-sep">|</span><span class="active">English</span><span class="lang-sep">|</span><a href="/ja/">日本語</a></div>
+    <select class="lang-select" onchange="location.href=this.value" aria-label="Language"><option value="/terms.html">한국어</option><option value="/en/terms.html" selected>English</option><option value="/ja/terms.html">日本語</option></select>
   </div>
 </nav>
 <main class="doc">
@@ -248,7 +246,7 @@ img{max-width:100%;display:block}
 <p>Questions about these Terms may be submitted to the following contact.</p>
 <ul>
 <li>Operator: kukuDev</li>
-<li>Representative: Jaeseok Oh</li>
+<li>Representative: O Jaeseok</li>
 <li>Business registration number: 390-68-00863</li>
 <li>Mail-order business report number: 2026-Incheon Yeonsu-gu-1196</li>
 <li>Address: 6F, Room 6649, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea</li>
@@ -400,7 +398,7 @@ img{max-width:100%;display:block}
 <h3>8. Changes to the Policy</h3>
 <p>This policy may be revised due to changes in applicable laws or operational needs. If there are material changes, prior notice will be provided through in-app notices or update notes.</p>
 <h3>9. Contact</h3>
-<p>If you have any questions about these Terms, please contact us at: <a href="mailto:support@kukudev.com">support@kukudev.com</a></p>
+<p>Questions about this policy, objections to blocked input, and inquiries about report processing may be submitted through the contact channel in the App settings or a separately provided customer support channel.</p>
 <hr>
 <p>This policy forms part of the ReppoChat Terms of Service. Matters not specified in this policy follow the Terms of Service and applicable laws.</p>
   </div>

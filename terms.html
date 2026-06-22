@@ -20,13 +20,11 @@ body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-
 a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
-.nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
+.nav-logo{display:flex;align-items:center;gap:9px;min-width:0}.nav-logo img{height:26px;flex:0 0 auto}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px;white-space:nowrap}
 .nav-right{display:flex;align-items:center;gap:14px}
 .nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
-.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
-.lang-toggle a,.lang-toggle span.active{padding:5px 8px;border-radius:7px}
-.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);text-decoration:none;background:var(--surface2)}
-.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:var(--hairline);font-size:11px}
+.lang-select{font-family:var(--font-pre);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface2);border:1px solid var(--hairline);border-radius:9px;padding:6px 28px 6px 11px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238B95A1' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:12px}
+.lang-select:hover{border-color:var(--ink-subtle)}
 .doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
 .doc-head{padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid var(--hairline)}
 .doc-head .tag{display:inline-flex;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--primary-tint);border:1px solid rgba(5,166,107,.18);padding:5px 12px;border-radius:9999px;margin-bottom:14px}
@@ -54,7 +52,7 @@ img{max-width:100%;display:block}
 .footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary)}
 .footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
 .footer-copy{font-size:12px;color:var(--ink-subtle)}
-@media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
+@media (max-width:768px){.nav{padding:0 16px}.nav-logo span{font-size:17px}.nav-right{gap:10px}.nav-back{font-size:13px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
 </style>
 </head>
 <body>
@@ -62,7 +60,7 @@ img{max-width:100%;display:block}
   <a href="/" class="nav-logo"><img src="assets/logo.png" alt="ReppoChat"><span>레포챗</span></a>
   <div class="nav-right">
     <a href="/" class="nav-back">홈으로</a>
-    <div class="lang-toggle"><span class="active">한국어</span><span class="lang-sep">|</span><a href="/en/">English</a><span class="lang-sep">|</span><a href="/ja/">日本語</a></div>
+    <select class="lang-select" onchange="location.href=this.value" aria-label="Language"><option value="/terms.html" selected>한국어</option><option value="/en/terms.html">English</option><option value="/ja/terms.html">日本語</option></select>
   </div>
 </nav>
 <main class="doc">
@@ -403,7 +401,7 @@ img{max-width:100%;display:block}
 <h3>8. 정책의 변경</h3>
 <p>본 정책은 관련 법령의 변경, 운영상의 필요 등에 따라 개정될 수 있습니다. 중요한 변경이 있는 경우 앱 내 공지 또는 업데이트 노트를 통해 사전에 안내합니다.</p>
 <h3>9. 문의</h3>
-<p>본 약관에 대해 질문이 있는 경우 다음 이메일로 문의하십시오: <a href="mailto:support@kukudev.com">support@kukudev.com</a></p>
+<p>본 정책에 관한 문의, 차단된 입력에 대한 이의 제기, 신고 처리 관련 문의는 앱 내 설정의 문의 채널 또는 별도로 안내되는 고객 지원 채널을 통해 접수할 수 있습니다.</p>
 <hr>
 <p>본 정책은 레포챗 서비스 이용약관의 일부를 구성합니다. 본 정책에서 정하지 아니한 사항은 서비스 이용약관 및 관련 법령에 따릅니다.</p>
   </div>
